@@ -1,0 +1,5 @@
+// (VP) (CC) (VP NP) --> (VP CC VP) NP
+tregex:    VP=p <1 (VP=c1 <: VBN|VBZ|VBD|VBP|VBG=cc1) <2 CC|CONJP <3 (VP=v2 <1 ~cc1=cc2 <2 NP|S=others) <- =v2
+operation: move others $- p
+
+// (VP) (CC) (VP NP) (...) --> (VP CC VP) N
