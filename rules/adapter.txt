@@ -12,4 +12,5 @@ operation: move others $- p
 //tregex:    NP=p <1 NNS=nns <2 /,/ <3 NN=n1 <4 CC=cc <5 NN=n2
 //operation: adjoinF (NP @) n1, move cc $- n1, move n2 $- cc
 
-tregex:    VP=p <
+tregex:    VP=p < (VBN|VBZ|VBD|VBP|VBG=cc1 $+ (CC|CONJP $+ (~cc1=c2)) !>1 =p)
+operation: move others $- p
