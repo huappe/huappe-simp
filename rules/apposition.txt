@@ -6,4 +6,8 @@ tregex:    NP=p <1 (@/N.*/=np1 !<< /,/ !<<, DT) <2 /,/ <3 (@/N.*/=np2 !<< /,/ <<
 // 17
 tregex:    NP=p <1 (@/N.*/=np1 !<< /,/ <<, DT) <2 /,/ <3 (@/N.*/=np2 !<< /,/ !<< DT)  !< CC <- =np2
 // 21
-tregex:    NP=p <1 (@/N.*/=
+tregex:    NP=p <1 (@/N.*/=np1 !<< /,/ <<, DT) <2 /,/ <3 (@/N.*/=np2 !<< /,/ !<< DT)  !< CC <- /,/
+// 33
+tregex:    NP=p < (NP=np1 $++ (PP <1 (VBG < /including/) <2 NP=np2))
+// 4
+tregex:    NP=p <1 (NP=np1 <1 CD) <2 
