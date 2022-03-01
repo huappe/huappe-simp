@@ -27,4 +27,13 @@ tregex:    NP=p <1 (NP=np1 <<, /the/) <2 /,/ <3 (NP=np2 <<, /^(a|an)_/)
 operation: replace p np1
 operation: replace p np2
 
-// DT ... N
+// DT ... NNS NP(no CC)
+// 4
+tregex:    NP=p <1 DT|JJ <-1 (NP=np2 !< CC !< /,/ $- NNS)
+operation: replace p np2
+operation: prune np2
+
+// DT NP(... NNS) NP
+// 0
+tregex:    NP=p <1 DT|JJ <2 (NP <- NNS) <3 (NP=np2 !< CC !< /,/) <- =np2
+o
