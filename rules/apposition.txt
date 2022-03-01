@@ -18,4 +18,13 @@ operation: replace p np2
 
 // NP(DT ...) NP(NN)
 // 8
-tregex:    NP=p <1 (NP=n
+tregex:    NP=p <1 (NP=np1 << DT) <2 (NP=np2 <: NN)
+operation: replace p np1
+operation: replace p np2
+
+// the NP , a NP
+tregex:    NP=p <1 (NP=np1 <<, /the/) <2 /,/ <3 (NP=np2 <<, /^(a|an)_/)
+operation: replace p np1
+operation: replace p np2
+
+// DT ... N
