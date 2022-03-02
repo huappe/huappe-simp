@@ -36,4 +36,11 @@ operation: prune np2
 // DT NP(... NNS) NP
 // 0
 tregex:    NP=p <1 DT|JJ <2 (NP <- NNS) <3 (NP=np2 !< CC !< /,/) <- =np2
-o
+operation: replace p np2
+operation: prune np2
+
+// NP : NP
+// 16
+tregex:    NP=p <1 NP=np1 <2 /:/ <3 (NP=np2 !<< CC !<< /,/) <- =np2
+operation: replace p np1
+operation: replace p np2

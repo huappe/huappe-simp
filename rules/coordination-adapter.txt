@@ -1,0 +1,2 @@
+// vbn coordination
+tregex:    VP=p < (
