@@ -3,4 +3,8 @@ tregex:    VP=p < (VBN|VBZ|VBD|VBP|VBG|VB=cc1 $+ (CC|CONJP=cc $+ (~cc1=cc2)) !>1
 operation: adjoinF (VP @) cc1, move cc $- cc1, move cc2 $- cc
 
 tregex:    VP=p < (VBN|VBZ|VBD|VBP|VBG|VB=cc1 $+ (CC|CONJP=cc $+ (~cc1=cc2 $+ __)))
-operation
+operation: adjoinF (VP @) cc1, move cc $- cc1, move cc2 $- cc
+
+// np , (np ... cc np)
+tregex:    NP=np <: NN|NNS=n1 $+ (/,/=comma $+ (NP <1 (NN|NNS=n2 $++ (CC [$+ NN|NNS | $+ (NP <: NN|NNS)] ))))
+operation: move comma $
