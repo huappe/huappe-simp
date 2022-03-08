@@ -1,0 +1,2 @@
+// identified NP as NP
+tregex: __=p < (VP <1 (/^VB.?$/ <<: /^(identif)(y|ies|ied|ying)|(recogniz|determin)(e|es|ed|ing)?|(regard|consi
