@@ -1,3 +1,3 @@
 // identified NP as NP
 tregex: __=p < (VP <1 (/^VB.?$/ <<: /^(identif)(y|ies|ied|ying)|(recogniz|determin)(e|es|ed|ing)?|(regard|consider|view|treat)(s|ed|ing)?|(think|thought)|(map)(s|ped|ping)?|(reveal)(s|ed|ing)?|(disclos)(e|es|ed|ing)?$/) <2 (NP=hype !< IN) <3 (PP <1 (IN <<: /as/) <2 NP=hypo))
-tregex: __=p < (VP <1 (/^VB.?$/ <<:
+tregex: __=p < (VP <1 (/^VB.?$/ <<: /^(identif)(y|ies|ied|ying)|(recogniz|determin)(e|es|ed|ing)?|(regard|consider|view|treat)(s|ed|ing)?|(think|thought)|(map)(s|ped|ping)?|(reveal)(s|ed|ing)?|(disclos)(e|es|ed|ing)?$/) <2 (NP <1 (NP=hype !< IN) <2 (PP <1 (IN <<: /as/) <2 N
