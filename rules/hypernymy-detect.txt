@@ -7,4 +7,7 @@ tregex: __=p < (VP <1 (/^VB.?$/ <<: /^(identif)(y|ies|ied|ying)|(recogniz|determ
 
 // NP was identified as NP
 tregex: S=p < (NP=hype $+ (VP <1 (/^VB.*$/ <<: /is|was|were|are/) <2 (VP <1 (/^VB.?$/ <<: /^identified|recognized|regarded|thought|mapped|revealed|known|disclosed$/) <2 (PP <1 (IN <<: /as/) <2 NP=hypo))))
-tregex: S=p < (NP=hype $+ (VP <1 (/^VB.*$/ <<: /is|was|were|are/) <2 (VP <1 (/^VB.?$/ <<: /^identified|recognized|regarded|thoug
+tregex: S=p < (NP=hype $+ (VP <1 (/^VB.*$/ <<: /is|was|were|are/) <2 (VP <1 (/^VB.?$/ <<: /^identified|recognized|regarded|thought|mapped|revealed|known|disclosed$/) <2 (PP <1 (IN <<: /as/) <2 NP=hypo))))
+
+// NP has been identified as NP
+tregex: S=p < (NP=hype $+ (VP <1 (/^VB.*$/ <<: /has|had|have/) <2 (VP <1 (/^VB.*$/ <<: /been/) <2 (VP <1 (/^VB.?$/ <<: /^identified|rec
