@@ -10,4 +10,5 @@ tregex: S=p < (NP=hype $+ (VP <1 (/^VB.*$/ <<: /is|was|were|are/) <2 (VP <1 (/^V
 tregex: S=p < (NP=hype $+ (VP <1 (/^VB.*$/ <<: /is|was|were|are/) <2 (VP <1 (/^VB.?$/ <<: /^identified|recognized|regarded|thought|mapped|revealed|known|disclosed$/) <2 (PP <1 (IN <<: /as/) <2 NP=hypo))))
 
 // NP has been identified as NP
-tregex: S=p < (NP=hype $+ (VP <1 (/^VB.*$/ <<: /has|had|have/) <2 (VP <1 (/^VB.*$/ <<: /been/) <2 (VP <1 (/^VB.?$/ <<: /^identified|rec
+tregex: S=p < (NP=hype $+ (VP <1 (/^VB.*$/ <<: /has|had|have/) <2 (VP <1 (/^VB.*$/ <<: /been/) <2 (VP <1 (/^VB.?$/ <<: /^identified|recognized|regarded|thought|mapped|revealed|known|disclosed$/) <2 (PP <1 (IN <<: /as/) <2 NP=hypo)))))
+tregex: S=p < (NP=hype $+ (VP <1 (/^VB.*$/ <<: /has|had|have/) <2 ADVP <3 (VP <1 (/^VB.*$/ <<: /been/) <2 (VP <1 (/^VB.
