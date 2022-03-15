@@ -15,4 +15,8 @@ tregex: S=p < (NP=hype $+ (VP <1 (/^VB.*$/ <<: /has|had|have/) <2 ADVP <3 (VP <1
 
 // NP , termed NP
 tregex: NP=p <1 (NP=hype) <2 /,/ <3 (VP <1 (/^VBN$/ <<: /^termed$/) <2 NP=hypo)
-tregex
+tregex: VP=p <1 (VP <<- NP=hype) <2 /,/ <3 (VP <1 (/^VBN$/ <<: /^termed$/) <2 NP=hypo)
+
+// NP , known as NP
+tregex: NP=p <1 (NP=hype) <2 /,/ <3 (VP <1 (/^VBN$/ <<: /^known$/) <2 (PP <1 (IN << /as/) <2 NP=hypo))
+tregex: NP=p <1 (NP=hype) <2 PP <3 /,/ <4
