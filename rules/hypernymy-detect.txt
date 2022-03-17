@@ -27,4 +27,8 @@ tregex: S=p <1 NP=hype <2 (VP <-1 (VP <1 (/^VB|VBZ|VBP$/ <<: /is|are|be|been/) <
 
 // NP act|serves as NP
 tregex: S=p < (NP=hype $+ (VP <1 (/^VB|VBZ|VBP|VBD$/ <<: /(act|serve)(s|d|ed)?/) <2 (PP <1 (IN << /as/) <2 NP=hypo)))
-tregex: S=p < (NP=hype $+ (VP <1 (/^VB|VBZ|VBP|VBD$/ <<: 
+tregex: S=p < (NP=hype $+ (VP <1 (/^VB|VBZ|VBP|VBD$/ <<: /(act|serve)(s|d|ed)?/) <2 (SBAR <1 (IN << /as/) <2 S=hypo)))
+tregex: S=p < (NP=hype $+ (VP <1 MD <2 (VP <1 (/^VB|VBZ|VBP|VBD$/ <<: /(act|serve)/) <2 (PP <1 (IN << /as/) <2 NP=hypo))))
+
+// identification of NP as NP
+tregex: NP=p <1 (NP 
