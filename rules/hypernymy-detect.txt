@@ -31,4 +31,6 @@ tregex: S=p < (NP=hype $+ (VP <1 (/^VB|VBZ|VBP|VBD$/ <<: /(act|serve)(s|d|ed)?/)
 tregex: S=p < (NP=hype $+ (VP <1 MD <2 (VP <1 (/^VB|VBZ|VBP|VBD$/ <<: /(act|serve)/) <2 (PP <1 (IN << /as/) <2 NP=hypo))))
 
 // identification of NP as NP
-tregex: NP=p <1 (NP 
+tregex: NP=p <1 (NP <<- /(i|I)dentification/) <2 (PP <1 (IN << /of/) <2 (NP <1 NP=hype <2 (PP <1 (IN <<: /as/) <2 NP=hypo)))
+tregex: __=p < (__ <<- (NP <1 (NP <<- /(i|I)dentification/) <2 (PP <1 (IN << /of/) <2 NP=hype)) $+ (PP <1 (IN <<: /as/) <2 NP=hypo))
+
