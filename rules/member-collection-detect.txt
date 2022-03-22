@@ -1,2 +1,6 @@
 // NP such as NP
-t
+tregex: __=p < (NP=tr $+ (PP <1 (JJ <: /such/) <2 (IN <: /as/) <3 NP=arg))
+tregex: __=p < ((PP <1 IN <-1 NP=tr) $+ (PP <1 (JJ <: /such/) <2 (IN <: /as/) <3 NP=arg))
+
+// NP , such as NP
+tregex: __=p < (NP=tr $+ (/,/ $
