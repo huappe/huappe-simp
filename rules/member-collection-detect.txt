@@ -21,4 +21,10 @@ tregex: __=p < ((PP <1 IN <-1 NP=tr) $+ (/,/ $+ (PP <<, /including/ <2 NP=arg)))
 tregex: __=p < (NP=tr $+ (PP <<, /including/ <2 NP=arg))
 tregex: __=p < (NP=tr $+ (VP <<, /including/ <2 NP=arg))
 tregex: __=p < ((PP <1 IN <-1 NP=tr) $+ (PP <<, /including/ <2 NP=arg))
-trege
+tregex: __=p < (NP=tr $+ (/:/ $+ (S <1 (VP <<, /including/ <2 NP=arg))))
+
+// NP which includes NP
+tregex: __=p < (NP=tr $+ (SBAR <<, /which|that/ <2 (S <1 (VP <<, /include/ <2 NP=arg))))
+
+// NP , which includes NP
+tregex: __=p <
