@@ -1,0 +1,2 @@
+tregex:    /,/=comma $+ SBAR=sbar
+operation: prune comma s

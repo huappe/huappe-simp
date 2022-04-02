@@ -31,4 +31,5 @@ tregex: __=p < (NP=tr $+ (/,/ $+ (SBAR <<, /which/ <2 (S <1 (VP <<, /include/ <2
 tregex: __=p < ((PP <1 IN <-1 NP=tr) $+ (/,/ $+ (SBAR <<, /which/ <2 (S <1 (VP <<, /include/ <2 NP=arg)))))
 
 // classes of NP
-tregex: NP=p <1 
+tregex: NP=p <1 (NP=tr <<- /class|variety/ !< PP) <2 (PP <<, /of/ <2 (NP=arg !< PP))
+tregex: NP=p <1 (NP=tr <<- /class|variety/ !< PP) <2 (PP <<, /of/ <2 (NP <1 NP=arg < PP))
