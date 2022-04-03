@@ -1,0 +1,5 @@
+// (NP -LRB- __ -RRB-) --> (PRN -LRB- __ -RRB-)
+tregex:    NP=np <1 -LRB- <3 -RRB-=rrb <- =rrb
+operation: relabel np PRN
+
+// LRB i
