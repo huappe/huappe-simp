@@ -2,4 +2,9 @@
 tregex:    NP=np <1 -LRB- <3 -RRB-=rrb <- =rrb
 operation: relabel np PRN
 
-// LRB i
+// LRB is not the first child of the parent
+tregex:    -LRB-=lrb $+ (__=xx $+ -RRB-=rrb) !>1 __
+operation: adjoinF (PRN @) lrb, move xx $- lrb, move rrb $- xx
+
+// PRN is not the last child of the parent
+tregex:    PRN=prn !>- __ $- NP=np
