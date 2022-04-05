@@ -8,3 +8,10 @@ operation: adjoinF (PRN @) lrb, move xx $- lrb, move rrb $- xx
 
 // PRN is not the last child of the parent
 tregex:    PRN=prn !>- __ $- NP=np
+operation: adjoinF (NP @) np, move prn $- np
+
+// If the ref NP has PP, find the right most NP
+tregex:    PRN=prn $- (NP < PP <<- (NP=np !< PP))
+operation: adjoinF (NP @) np, move prn $- np
+
+// If the ref is VP, find the right 
