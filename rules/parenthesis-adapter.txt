@@ -14,4 +14,7 @@ operation: adjoinF (NP @) np, move prn $- np
 tregex:    PRN=prn $- (NP < PP <<- (NP=np !< PP))
 operation: adjoinF (NP @) np, move prn $- np
 
-// If the ref is VP, find the right 
+// If the ref is VP, find the right most NP
+tregex:    PRN=prn $- (VP <<- (NP=np !< PP))
+operation: adjoinF (NP @) np, move prn $- np
+

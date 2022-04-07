@@ -1,0 +1,3 @@
+tregex:    NP < (NN=n1 $+ (-LRB-=lrb $+ (NN=n2 $+ (NN=n3 $+ -RRB-=rrb))))
+operation: prune lrb n2 n3 rrb
+operation: prune n1 lrb rrb
