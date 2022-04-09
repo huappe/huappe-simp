@@ -12,4 +12,12 @@ operation: replace n2 n4
 tregex:    S=n0 <1 (PRN=n1 <1 (-LRB-=n2) <2 (NP=n3) <3 (-RRB-=n13) <- =n13) <- =n1
 operation: prune n1
 
-tregex:    S=n0 <1 (-LRB-=n1) <2 (NP=n2) <3 (VP=n13) <4 (-RRB-
+tregex:    S=n0 <1 (-LRB-=n1) <2 (NP=n2) <3 (VP=n13) <4 (-RRB-=n25) <- =n25
+operation: prune n0
+operation: new n0
+
+tregex:    NP=n0 <1 (NN=n1) <2 (-LRB-=n2) <3 (CD=n3) <4 (-RRB-=n4) <- =n4
+operation: prune n2 n4
+operation: prune n2 n3 n4
+
+tregex:    __ < (@/N.*|JJ|CD/=n0 $+ (-
