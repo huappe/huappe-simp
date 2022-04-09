@@ -6,4 +6,10 @@ tregex:    NP=n0 <1 (NP=n1 !< PP) <2 (PRN=n3 <1 (-LRB-=n4) <2 (NP|QP|ADJP=n5) <3
 operation: replace n0 n1
 operation: replace n0 n5
 
-tregex:    ADJP=n0 <1 (JJ=n1) <2 (PRN=n2 <1 (-LRB-=n3) <2 
+tregex:    ADJP=n0 <1 (JJ=n1) <2 (PRN=n2 <1 (-LRB-=n3) <2 (NP=n4) <3 (-RRB-=n6) <- =n6) <- =n2
+operation: replace n2 n4
+
+tregex:    S=n0 <1 (PRN=n1 <1 (-LRB-=n2) <2 (NP=n3) <3 (-RRB-=n13) <- =n13) <- =n1
+operation: prune n1
+
+tregex:    S=n0 <1 (-LRB-=n1) <2 (NP=n2) <3 (VP=n13) <4 (-RRB-
