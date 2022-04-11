@@ -20,4 +20,11 @@ tregex:    NP=n0 <1 (NN=n1) <2 (-LRB-=n2) <3 (CD=n3) <4 (-RRB-=n4) <- =n4
 operation: prune n2 n4
 operation: prune n2 n3 n4
 
-tregex:    __ < (@/N.*|JJ|CD/=n0 $+ (-
+tregex:    __ < (@/N.*|JJ|CD/=n0 $+ (-LRB-=n1 $+ (__=n2 $+ -RRB-=n3)))
+operation: prune n1 n2 n3
+operation: prune n0 n1 n3
+
+tregex:    NP=n0 <1 (LST=n1 <1 (-LRB-=n2) <2 (LS=n3) <3 (-RRB-=n4) <- =n4)
+operation: prune n1
+
+tregex:    VP=n0 <1 (VBN=n1) <2 (PRN=n2 <1 (-LRB
