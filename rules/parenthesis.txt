@@ -33,4 +33,7 @@ operation: replace n2 n4
 tregex:    VP=n0 <1 (VBN=n1) <2 (ADVP=n2 <1 (RB=n3) <- =n3) <3 (PRN=n4 <1 (-LRB-=n5) <2 (NP=n6) <3 (-RRB-=n8) <- =n8) <- =n4
 operation: replace n2 n6, prune n4
 
-tregex:    NP=n0 
+tregex:    NP=n0 <1 (NP=n1 <1 (NP=n2) <2 (PP=n5 <1 (IN=n6) <2 (NP=n7) <- =n7) <- =n5) <2 (PRN=n11 <1 (-LRB-=n12) <2 (NP=n13) <3 (-RRB-=n15) <- =n15) <- =n11
+operation: replace n0 n1
+operation: replace n0 n13
+operation: replace n7 n13
