@@ -42,4 +42,8 @@ tregex:    __ < (ADJP|JJ=n0 $+ (PRN=n3 <1 (-LRB-=n4) <2 (__=n5) <3 (-RRB-=n7) <-
 operation: replace n3 n5
 
 tregex:    __ < (NP|NN=n0 $+ (PRN=n3 <1 (-LRB-=n4) <2 (__=n5) <3 (-RRB-=n7) <- =n7))
-op
+operation: replace n0 n5
+operation: prune n3
+
+tregex:    NP=n0 <1 (NP=n1) <2 (PRN=n5 <1 (-LRB-=n6) <2 (NP=n7) <3 (/:/=n9) <4 (NP=n10) <5 (/,/=n13) <6 (NP=n14) <7 (-RRB-=n17) <- =n17) <- =n5
+operation: rep
