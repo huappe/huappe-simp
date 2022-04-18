@@ -46,4 +46,10 @@ operation: replace n0 n5
 operation: prune n3
 
 tregex:    NP=n0 <1 (NP=n1) <2 (PRN=n5 <1 (-LRB-=n6) <2 (NP=n7) <3 (/:/=n9) <4 (NP=n10) <5 (/,/=n13) <6 (NP=n14) <7 (-RRB-=n17) <- =n17) <- =n5
-operation: rep
+operation: replace n0 n1
+operation: replace n0 n7
+operation: replace n0 n10
+operation: replace n0 n14
+
+tregex:    NP=n0 <1 (NP=n1) <2 (PRN=n4 <1 (-LRB-=n5) <2 (NP=n6) <3 (/,/=n9) <4 (NP=n10) <5 (-RRB-=n13) <- =n13) <- =n4
+o
