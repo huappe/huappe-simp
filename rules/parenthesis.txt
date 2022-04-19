@@ -58,4 +58,12 @@ operation: replace n0 n10
 
 tregex:    (PP=n0 <1 (IN=n1) <2 (NP=n2) <- =n2) $+ (PRN=n4 <1 (-LRB-=n5) <2 (NP=n6) <3 (-RRB-=n8) <- =n8)
 operation: prune n4
-operation: replace n2 n6
+operation: replace n2 n6, prune n4
+
+tregex:    NP=n0 <1 (-LRB-=n1) <2 (NP=n2) <3 (-RRB-=n6) <- =n6
+operation: replace n0 n2
+
+#tregex:    __=n0 <1 (-LRB-=n1) <2 (__=n2) <3 (-RRB-=n3)
+#operation: prune n1 n3
+
+tregex:    NP=n0 <1 (JJ=n1) <2 (-LRB-=n2) <3 (NN=n3) <4
