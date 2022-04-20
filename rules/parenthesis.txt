@@ -66,4 +66,8 @@ operation: replace n0 n2
 #tregex:    __=n0 <1 (-LRB-=n1) <2 (__=n2) <3 (-RRB-=n3)
 #operation: prune n1 n3
 
-tregex:    NP=n0 <1 (JJ=n1) <2 (-LRB-=n2) <3 (NN=n3) <4
+tregex:    NP=n0 <1 (JJ=n1) <2 (-LRB-=n2) <3 (NN=n3) <4 (CD=n4) <5 (-RRB-=n5) <6 (JJ=n6) <7 (NN=n7) <8 (NN=n8) <- =n8
+operation: prune n2 n5
+
+tregex:    ADJP=n0 <1 (ADJP=n1) <2 (PRN=n3 <1 (-LRB-=n4) <2 (NP=n5) <3 (/,/=n8) <4 (NP=n9) <5 (-RRB-=n12) <- =n12) <- =n3
+operati
