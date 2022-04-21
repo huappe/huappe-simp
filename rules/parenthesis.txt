@@ -70,4 +70,9 @@ tregex:    NP=n0 <1 (JJ=n1) <2 (-LRB-=n2) <3 (NN=n3) <4 (CD=n4) <5 (-RRB-=n5) <6
 operation: prune n2 n5
 
 tregex:    ADJP=n0 <1 (ADJP=n1) <2 (PRN=n3 <1 (-LRB-=n4) <2 (NP=n5) <3 (/,/=n8) <4 (NP=n9) <5 (-RRB-=n12) <- =n12) <- =n3
-operati
+operation: replace n3 n5
+operation: replace n3 n9
+
+tregex:    NP=n0 <1 (NN=n1) <2 (NN=n2) <3 (JJ=n3) <4 (NN=n4) <5 (-LRB-=n5) <6 (NN=n6) <7 (NN=n7) <8 (-RRB-=n8) <9 (NN=n9) <- =n9
+operation: prune n5 n8 n6 n7
+op
