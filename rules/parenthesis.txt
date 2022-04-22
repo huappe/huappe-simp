@@ -75,4 +75,10 @@ operation: replace n3 n9
 
 tregex:    NP=n0 <1 (NN=n1) <2 (NN=n2) <3 (JJ=n3) <4 (NN=n4) <5 (-LRB-=n5) <6 (NN=n6) <7 (NN=n7) <8 (-RRB-=n8) <9 (NN=n9) <- =n9
 operation: prune n5 n8 n6 n7
-op
+operation: prune n4 n5 n8
+
+tregex:    NP=n0 <1 (NP=n1) <2 (NN=n7) <3 (-LRB-=n8) <4 (NN=n9) <5 (NN=n10) <6 (-RRB-=n11) <7 (NN=n12) <- =n12
+operation: prune n8 n9 n10 n11
+operation: prune n7 n8 n11
+
+tregex:    VP=n0 <1 (VBD=
