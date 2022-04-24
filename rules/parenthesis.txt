@@ -90,4 +90,8 @@ tregex:    NP=n0 <1 (NP=n1) <2 (PRN=n5 <1 (-LRB-=n6) <2 (CC|CONJP=n7) <3 (ADVP=n
 operation: replace n0 n1
 operation: replace n0 n10
 
-tregex:    NP=n
+tregex:    NP=n0 <1 (NP=n1) <2 (PRN=n6 <1 (-LRB-=n7) <2 (PP=n8 <1 (FW=n9) <- =n9) <3 (/,/=n10) <4 (NP=n11) <5 (-RRB-=n18) <- =n18) <- =n6
+operation: replace n0 n1
+operation: replace n0 n11
+
+tregex:    NP=n0 <1 (NP=n1) <2 (PRN=n4 <1 (-
