@@ -84,4 +84,10 @@ operation: prune n7 n8 n11
 tregex:    VP=n0 <1 (VBD=n1) <2 (ADVP=n2) <3 (PP=n4 <1 (IN=n5) <2 (NP=n6) <- =n6) <4 (PRN=n9 <1 (-LRB-=n10) <2 (NP=n11) <3 (/,/=n14) <4 (NP=n15) <5 (-RRB-=n21) <- =n21) <- =n9
 operation: prune n9
 operation: replace n6 n11, prune n9
-operatio
+operation: replace n6 n15, prune n9
+
+tregex:    NP=n0 <1 (NP=n1) <2 (PRN=n5 <1 (-LRB-=n6) <2 (CC|CONJP=n7) <3 (ADVP=n8) <4 (NP=n10) <5 (-RRB-=n13) <- =n13) <- =n5
+operation: replace n0 n1
+operation: replace n0 n10
+
+tregex:    NP=n
