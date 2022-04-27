@@ -99,4 +99,8 @@ operation: replace n0 n1
 operation: replace n0 n8
 operation: replace n0 n11
 
-tregex:    NP=n0 <1 (NP=n1) <2 (PRN=n3 <1 (-LRB-=
+tregex:    NP=n0 <1 (NP=n1) <2 (PRN=n3 <1 (-LRB-=n4) <2 (CC|CONJP=n5) <3 (NP=n6) <4 (-RRB-=n14) <- =n14) <- =n3
+operation: replace n0 n1
+operation: replace n0 n6
+
+tregex:    NP=n0 <1 (NP=n1) <2 (PRN=n4 <1 (-LRB-=n5) <2 (NP=n6) <3 (/:/=n8) <4 (NP=n9) <5 (-RRB-=n11)
