@@ -110,4 +110,10 @@ operation: replace n0 n9
 
 tregex:    NP=n0 <1 (NP=n1) <2 (-LRB-=n7) <3 (CC|CONJP=n8) <4 (NP=n9) <5 (-RRB-=n16) <- =n16
 operation: replace n0 n1
-operation: repla
+operation: replace n0 n9
+
+tregex:    NN=n1 $+ (-LRB-=n2 $+ (NN|JJ=n3 $+ (NN|CD=n4 $+ (-RRB-=n5))))
+operation: prune n2 n3 n4 n5
+operation: prune n1 n2 n5
+
+tregex:    NP=n0 <1 (NP=n1) <2 (-LRB-=n3) <3 (CC|CONJP=n4) <4 (NP=n5) <5 (-RRB-=
