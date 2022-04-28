@@ -116,4 +116,10 @@ tregex:    NN=n1 $+ (-LRB-=n2 $+ (NN|JJ=n3 $+ (NN|CD=n4 $+ (-RRB-=n5))))
 operation: prune n2 n3 n4 n5
 operation: prune n1 n2 n5
 
-tregex:    NP=n0 <1 (NP=n1) <2 (-LRB-=n3) <3 (CC|CONJP=n4) <4 (NP=n5) <5 (-RRB-=
+tregex:    NP=n0 <1 (NP=n1) <2 (-LRB-=n3) <3 (CC|CONJP=n4) <4 (NP=n5) <5 (-RRB-=n7) <- =n7
+operation: replace n0 n1
+operation: replace n0 n5
+
+tregex:    NP=n0 <1 (NP=n1) <2 (PRN=n4 <1 (-LRB-=n5) <2 (NP=n6) <3 (PP=n8) <4 (-RRB-=n15) <- =n15) <- =n4
+operation: replace n0 n1
+operation: replace n1 n6, replace n4 n
