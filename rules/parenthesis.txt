@@ -122,4 +122,11 @@ operation: replace n0 n5
 
 tregex:    NP=n0 <1 (NP=n1) <2 (PRN=n4 <1 (-LRB-=n5) <2 (NP=n6) <3 (PP=n8) <4 (-RRB-=n15) <- =n15) <- =n4
 operation: replace n0 n1
-operation: replace n1 n6, replace n4 n
+operation: replace n1 n6, replace n4 n8
+
+tregex:    NN=n5 $+ (-LRB-=n6 $+ (NN=n7 $+ (/,/=n8 $+ (NN=n9 $+ -RRB-=n10))))
+operation: prune n6 n7 n8 n9 n10
+operation: prune n5 n6 n8 n9 n10
+operation: prune n5 n6 n7 n8 n10
+
+tregex:    NP=n0 <1 (NP=n1) <2 (PRN=n4 <1 (-LRB-=n5) <2 (
