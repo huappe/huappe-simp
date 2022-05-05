@@ -1,3 +1,7 @@
 // whnp relative clause
 tregex:    /^NP/=p < (/^NP/=ref $+ (/^SBAR/=clause <1 (WHNP) <2 (S <1 /^VP/=vp)))
-tregex:    /^NP/=p < (/^NP/=ref $+ (/^SBAR/=clause <1 (WHNP) <2 (S <1 PP|ADVP <2 /^VP/=vp))
+tregex:    /^NP/=p < (/^NP/=ref $+ (/^SBAR/=clause <1 (WHNP) <2 (S <1 PP|ADVP <2 /^VP/=vp)))
+tregex:    /^NP/=p < (/^NP/=ref $+ (/,/ $+ (/^SBAR/=clause <1 (WHNP) <2 (S <1 /^VP/=vp))))
+tregex:    /^NP/=p < (/^NP/=ref $+ (/,/ $+ (/^SBAR/=clause <1 (WHNP) <2 (S <1 PP|ADVP <2 /^VP/=vp))))
+// only one case
+tr
