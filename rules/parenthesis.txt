@@ -132,4 +132,4 @@ operation: prune n5 n6 n7 n8 n10
 tregex:    NP=n0 <1 (NP=n1) <2 (PRN=n4 <1 (-LRB-=n5) <2 (PP=n6 <1 (IN=n7 <: /for/) <2 (NP=n8 <1 (NN=n9 < /example/) <- =n9) <- =n8) <3 (/,/=n10) <4 (NP=n11 <1 (NP=n12) <2 (/,/=n14) <3 (NP=n15) <- =n15) <5 (-RRB-=n17) <- =n17) <- =n4
 operation: replace n0 n1
 operation: replace n0 n11
-operation:
+operation: replace n0 n15
