@@ -8,4 +8,8 @@ tregex:    /^NP/=p < (/^NP/=ref $+ (/,/ $+ (/^SBAR/=clause <1 (WHNP <<: /which/)
 
 // wrb relative clause
 tregex:    /^NP/=p < (/^NP/=ref $+ (/^SBAR/=clause <1 WHADVP <2 S=s))
-tregex:    /^NP/=p < (/^NP/=ref $+ (/
+tregex:    /^NP/=p < (/^NP/=ref $+ (/,/ $+ (/^SBAR/=clause <1 WHADVP <2 S=s)))
+
+// whpp relative clause
+tregex:    /^NP/=p < (/^NP/=ref $+ (/^SBAR/=clause <1 (WHPP <1 IN=in) <2 (S <1 /^NP/)))
+tregex:    /^NP/=p < (/^NP/=ref $+ (/,/ $+ (/^SBAR/=clause <1 (WHPP
