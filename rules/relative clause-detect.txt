@@ -25,4 +25,10 @@ tregex:    /^NP/=p < (/^NP/=ref1 $+ (/,/ $+ (((/^VP/ <2 /^S|NP$/=ref2) $+ (/,/=c
 // NP of NP
 tregex:    /^NP/=p < (/^NP/=ref1 $+ ((PP <1 IN <2 NP=ref) $+ (/^SBAR/=clause <1 (WHNP <1 WDT) <2 (S <1 /^VP/=vp))))
 tregex:    /^NP/=p < (/^NP/=ref1 $+ ((PP <2 NP=ref) $+ (/,/=comma $+ (/^SBAR/=clause <1 (WHNP <1 WDT) <2 (S <1 /^VP/=vp)))))
-tregex:    /^NP/=p < (/^NP/=ref1 $+ (/,/ $+ (((/^VP/ <2 /^S|NP$/=ref) $+
+tregex:    /^NP/=p < (/^NP/=ref1 $+ (/,/ $+ (((/^VP/ <2 /^S|NP$/=ref) $+ (/,/=comma $+ (/^SBAR/=clause <1 (WHNP <1 WDT) <2 (S <1 /^VP/=vp)))))))
+
+// as demenstrated ...
+#tregex:    /^NP/=p < (/^NP/=ref $+ (/^SBAR/=clause <1 (IN << /as/) <2 (S <1 /^VP/=vp)))
+
+// reduced relative clause
+tregex:    /^NP/=p <1 /
