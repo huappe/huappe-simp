@@ -23,4 +23,6 @@ tregex:    /^NP/=p < (/^NP/=ref1 $+ ((/^PP/ <2 NP=ref2) $+ (/,/=comma $+ (/^SBAR
 tregex:    /^NP/=p < (/^NP/=ref1 $+ (/,/ $+ (((/^VP/ <2 /^S|NP$/=ref2) $+ (/,/=comma $+ (/^SBAR/=clause <1 (WHNP=whnp <1 /WP\$/=wp <2 __=np) <2 (S <1 /^VP/=vp)))))))
 
 // NP of NP
-tregex:    /^NP/=p < (/^NP/=ref1 $+ ((PP <1 IN <2 NP=ref) $+ (/^SBAR/=clause <
+tregex:    /^NP/=p < (/^NP/=ref1 $+ ((PP <1 IN <2 NP=ref) $+ (/^SBAR/=clause <1 (WHNP <1 WDT) <2 (S <1 /^VP/=vp))))
+tregex:    /^NP/=p < (/^NP/=ref1 $+ ((PP <2 NP=ref) $+ (/,/=comma $+ (/^SBAR/=clause <1 (WHNP <1 WDT) <2 (S <1 /^VP/=vp)))))
+tregex:    /^NP/=p < (/^NP/=ref1 $+ (/,/ $+ (((/^VP/ <2 /^S|NP$/=ref) $+
