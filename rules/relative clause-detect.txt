@@ -31,4 +31,7 @@ tregex:    /^NP/=p < (/^NP/=ref1 $+ (/,/ $+ (((/^VP/ <2 /^S|NP$/=ref) $+ (/,/=co
 #tregex:    /^NP/=p < (/^NP/=ref $+ (/^SBAR/=clause <1 (IN << /as/) <2 (S <1 /^VP/=vp)))
 
 // reduced relative clause
-tregex:    /^NP/=p <1 /
+tregex:    /^NP/=p <1 /^NP/=ref <2 (/^VP/=clause <1 VBN|VBG)
+tregex:    /^NP/=p <1 /^NP/=ref <2 (/^PP/=clause <1 (VBG << /including/))
+tregex:    /^NP/=p <1 @/N.*/=ref <2 /,/ <3 (/^VP/=clause <1 VBN|VBG)
+tregex:    __=p < (/^NP/=re
