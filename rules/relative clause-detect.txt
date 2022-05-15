@@ -34,4 +34,8 @@ tregex:    /^NP/=p < (/^NP/=ref1 $+ (/,/ $+ (((/^VP/ <2 /^S|NP$/=ref) $+ (/,/=co
 tregex:    /^NP/=p <1 /^NP/=ref <2 (/^VP/=clause <1 VBN|VBG)
 tregex:    /^NP/=p <1 /^NP/=ref <2 (/^PP/=clause <1 (VBG << /including/))
 tregex:    /^NP/=p <1 @/N.*/=ref <2 /,/ <3 (/^VP/=clause <1 VBN|VBG)
-tregex:    __=p < (/^NP/=re
+tregex:    __=p < (/^NP/=ref $+ (/^VP/=clause <1 /^VBG/))
+tregex:    __=p < (/^NP/=ref $+ (/,/ $+ (/^S/ <: (/^VP/=clause <1 /^VBG/))))
+#tregex:    /^NP/=p <1 /^NP/=ref <2 VBN|VBG=clause
+
+#tregex:    __=p < (/,/=comma $+ (S=s <: (/^VP/=clause <1 (VBG) <2
