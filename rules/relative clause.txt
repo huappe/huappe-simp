@@ -5,4 +5,7 @@ operation: replace p ref
 operation: replace wp ref, relabel whnp NP
 
 // NP of NP
-tregex:    NP
+tregex:    NP=p < (NP=ref1 $+ ((PP <1 IN <2 NP=ref2) $+ (SBAR=clause <1 (WHNP=whnp <1 /WP\$/=wp <2 __=np) <2 (S <1 VP=vp))))
+operation: prune clause
+operation: replace wp ref1, relabel whnp NP
+operation: replace wp ref2, relabel
