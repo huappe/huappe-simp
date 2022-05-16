@@ -1,0 +1,8 @@
+// whnp relative clause
+// 16
+tregex:    NP=p < (NP=ref $+ (SBAR <1 (WHNP=whnp <1 /WP\$/=wp <2 __=np) <2 (S=clause)))
+operation: replace p ref
+operation: replace wp ref, relabel whnp NP
+
+// NP of NP
+tregex:    NP

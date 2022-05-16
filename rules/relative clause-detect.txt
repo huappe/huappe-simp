@@ -38,4 +38,5 @@ tregex:    __=p < (/^NP/=ref $+ (/^VP/=clause <1 /^VBG/))
 tregex:    __=p < (/^NP/=ref $+ (/,/ $+ (/^S/ <: (/^VP/=clause <1 /^VBG/))))
 #tregex:    /^NP/=p <1 /^NP/=ref <2 VBN|VBG=clause
 
-#tregex:    __=p < (/,/=comma $+ (S=s <: (/^VP/=clause <1 (VBG) <2
+#tregex:    __=p < (/,/=comma $+ (S=s <: (/^VP/=clause <1 (VBG) <2 (/^SBAR/ <2 S=s2))))
+
