@@ -24,4 +24,12 @@ operation: replace wp ref2, relabel whnp NP
 // 154
 tregex:    NP=p < (NP=ref $+ (SBAR=clause <1 (WHNP <1 WDT) <2 (S <1 VP=vp)))
 // 88
-tregex:    NP=p < (NP=ref $+ (/,/ $+ (SBAR=clause <1 (WHNP <1 WDT) <2 (S
+tregex:    NP=p < (NP=ref $+ (/,/ $+ (SBAR=clause <1 (WHNP <1 WDT) <2 (S <1 VP=vp))))
+operation: replace p ref
+operation: new ref vp
+
+// NP of NP
+tregex:    NP=p < (NP=ref1 $+ ((PP <1 IN <2 NP=ref2) $+ (SBAR=clause <1 (WHNP <1 WDT) <2 (S <1 VP=vp))))
+operation: prune clause
+operation: new ref1 vp
+operation: new r
