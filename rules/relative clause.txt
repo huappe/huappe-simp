@@ -46,4 +46,13 @@ operation: new ref2 vp
 
 // wrb relative clause
 // 4
-tregex:    NP=p < (NP=ref $+ (SBAR=clause <1 WH
+tregex:    NP=p < (NP=ref $+ (SBAR=clause <1 WHADVP <2 S=s))
+// 4
+tregex:    NP=p < (NP=ref $+ (/,/ $+ (SBAR=clause <1 WHADVP <2 S=s)))
+operation: replace p ref
+operation: new s
+
+// as demenstrated ...
+// 6
+tregex:    NP=p < (NP=ref $+ (SBAR <1 (IN << /as/) <2 (S <1 VP=vp)))
+o
