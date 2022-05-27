@@ -65,3 +65,12 @@ operation: new clause in ref
 
 // reduced relative clause
 // 471
+tregex:    NP=p <1 NP=ref <2 (VP=vp <1 VBN|VBG)
+// 23
+tregex:    NP=p <1 @/N.*/=ref <2 /,/ <3 (VP=vp <1 VBN|VBG)
+// 1
+tregex:    NP=p <1 NP=ref <2 VBN|VBG=vp
+operation: replace p ref
+operation: new ref vp
+
+tregex:    __=p < (/,/=comma $+ (S=s <: (VP <1 (VBG) <2 
