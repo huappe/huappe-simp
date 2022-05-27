@@ -55,4 +55,13 @@ operation: new s
 // as demenstrated ...
 // 6
 tregex:    NP=p < (NP=ref $+ (SBAR <1 (IN << /as/) <2 (S <1 VP=vp)))
-o
+operation: replace p ref
+
+// whpp relative clause
+// 18
+tregex:    NP=p < (NP=ref $+ (SBAR <1 (WHPP <1 IN=in) <2 (S=clause <1 NP)))
+operation: replace p ref
+operation: new clause in ref
+
+// reduced relative clause
+// 471
