@@ -73,4 +73,7 @@ tregex:    NP=p <1 NP=ref <2 VBN|VBG=vp
 operation: replace p ref
 operation: new ref vp
 
-tregex:    __=p < (/,/=comma $+ (S=s <: (VP <1 (VBG) <2 
+tregex:    __=p < (/,/=comma $+ (S=s <: (VP <1 (VBG) <2 (SBAR <2 S=s2))))
+operation: prune comma s
+operation: new s2
+
