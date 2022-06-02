@@ -16,4 +16,14 @@ if [ -z "$JAVACCMD" ] ; then
 fi
 
 # create bin folder
-if [ ! -d "$OUTPUT_D
+if [ ! -d "$OUTPUT_DIR" ]; then
+  mkdir "$OUTPUT_DIR"
+fi
+
+# clean bin folder
+find "$OUTPUT_DIR" -type f -name '*.class' -exec rm -f {} \;
+
+# compile
+find "$SRC_DIR" -name '*.java' > sources_list.txt
+$JAVACCMD -g -d "$OUTPUT_DIR" -classpath "$CLASSPATH" @sources_list.txt
+rm -f sources_l
