@@ -26,4 +26,4 @@ find "$OUTPUT_DIR" -type f -name '*.class' -exec rm -f {} \;
 # compile
 find "$SRC_DIR" -name '*.java' > sources_list.txt
 $JAVACCMD -g -d "$OUTPUT_DIR" -classpath "$CLASSPATH" @sources_list.txt
-rm -f sources_l
+rm -f sources_list.txt
