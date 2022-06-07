@@ -12,4 +12,12 @@ public class AdapterPattern {
 
   public AdapterPattern(
       TregexPattern tregexPattern,
-      TsurgeonPattern tsurgeonPattern)
+      TsurgeonPattern tsurgeonPattern) {
+    this.tregexPattern = tregexPattern;
+    this.tsurgeonPattern = tsurgeonPattern;
+  }
+
+  public final boolean evaluate(Tree tree) {
+    boolean matched = false;
+    TregexMatcher m = tregexPattern.matcher(tree);
+ 
