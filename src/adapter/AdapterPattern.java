@@ -20,4 +20,15 @@ public class AdapterPattern {
   public final boolean evaluate(Tree tree) {
     boolean matched = false;
     TregexMatcher m = tregexPattern.matcher(tree);
- 
+    if (m.find()) {
+      matched = true;
+      tsurgeonPattern.evaluate(tree, m);
+    }
+    return matched;
+  }
+
+  public final TregexPattern getTregexPattern() {
+    return tregexPattern;
+  }
+
+  public final Tsurg
