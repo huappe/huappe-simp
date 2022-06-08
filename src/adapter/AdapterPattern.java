@@ -31,4 +31,12 @@ public class AdapterPattern {
     return tregexPattern;
   }
 
-  public final Tsurg
+  public final TsurgeonPattern getTsurgeonPattern() {
+    return tsurgeonPattern;
+  }
+
+  @Override
+  public String toString() {
+    return "[pattern=" + tregexPattern + ",operation=" + tsurgeonPattern + "]";
+  }
+}
