@@ -16,4 +16,10 @@ import edu.stanford.nlp.trees.tregex.TregexPattern;
 import edu.stanford.nlp.trees.tregex.tsurgeon.Tsurgeon;
 import edu.stanford.nlp.trees.tregex.tsurgeon.TsurgeonPattern;
 
-public 
+public class AdapterTregexReader implements Closeable {
+
+  private static final List<AdapterPattern> list   = new ArrayList<AdapterPattern>();
+
+  private static boolean                    isRead = false;
+
+  public void is
