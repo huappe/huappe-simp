@@ -22,4 +22,19 @@ public class AdapterTregexReader implements Closeable {
 
   private static boolean                    isRead = false;
 
-  public void is
+  public void isRead() {
+    isRead = true;
+  }
+
+  public static List<AdapterPattern> getTregex() {
+    if (!isRead) {
+      read();
+    }
+    return list;
+  }
+
+  private static void read() {
+    list.clear();
+    try {
+      read(
+       
