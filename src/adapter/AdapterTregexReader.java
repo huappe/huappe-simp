@@ -37,4 +37,6 @@ public class AdapterTregexReader implements Closeable {
     list.clear();
     try {
       read(
-       
+          new FileInputStream(PatternEnv.DIR + PatternEnv.PAR_ADATER_TREGEX),
+          new FileInputStream(PatternEnv.DIR + PatternEnv.REL_ADATER_TREGEX),
+          new FileInputStream(PatternEnv.DIR + PatternEnv.COO_ADATER_TREGEX),
