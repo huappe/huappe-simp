@@ -40,3 +40,11 @@ public class AdapterTregexReader implements Closeable {
           new FileInputStream(PatternEnv.DIR + PatternEnv.PAR_ADATER_TREGEX),
           new FileInputStream(PatternEnv.DIR + PatternEnv.REL_ADATER_TREGEX),
           new FileInputStream(PatternEnv.DIR + PatternEnv.COO_ADATER_TREGEX),
+          new FileInputStream(PatternEnv.DIR + PatternEnv.ADATER_TREGEX));
+    } catch (FileNotFoundException e) {
+      e.printStackTrace();
+    }
+    isRead = true;
+  }
+
+  public static void read(InputStream paradap
