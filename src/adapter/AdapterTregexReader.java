@@ -47,4 +47,9 @@ public class AdapterTregexReader implements Closeable {
     isRead = true;
   }
 
-  public static void read(InputStream paradap
+  public static void read(InputStream paradapteris, InputStream reladapteris, InputStream cooadapteris, InputStream adapteris) {
+    AdapterTregexReader reader;
+    try {
+      reader = new AdapterTregexReader(paradapteris);
+      list.addAll(reader.readTregex());
+      
