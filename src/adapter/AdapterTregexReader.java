@@ -59,4 +59,12 @@ public class AdapterTregexReader implements Closeable {
       reader.close();
       
       reader = new AdapterTregexReader(cooadapteris);
- 
+      list.addAll(reader.readTregex());
+      reader.close();
+      
+      reader = new AdapterTregexReader(adapteris);
+      list.addAll(reader.readTregex());
+      reader.close();
+      
+      isRead = true;
+    } catch (IO
