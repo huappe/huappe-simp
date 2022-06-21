@@ -67,4 +67,15 @@ public class AdapterTregexReader implements Closeable {
       reader.close();
       
       isRead = true;
-    } catch (IO
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
+
+  LineNumberReader reader;
+
+  public AdapterTregexReader(InputStream is) {
+    this.reader = new LineNumberReader(new InputStreamReader(is));
+  }
+
+  public List<AdapterPatte
