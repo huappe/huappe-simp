@@ -78,4 +78,8 @@ public class AdapterTregexReader implements Closeable {
     this.reader = new LineNumberReader(new InputStreamReader(is));
   }
 
-  public List<AdapterPatte
+  public List<AdapterPattern> readTregex()
+      throws IOException {
+    List<AdapterPattern> list = new LinkedList<AdapterPattern>();
+    List<TregexPattern> tregexPatterns = new ArrayList<TregexPattern>();
+    List<TsurgeonPattern> tsurgeonPatterns = n
