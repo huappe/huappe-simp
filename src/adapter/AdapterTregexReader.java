@@ -82,4 +82,11 @@ public class AdapterTregexReader implements Closeable {
       throws IOException {
     List<AdapterPattern> list = new LinkedList<AdapterPattern>();
     List<TregexPattern> tregexPatterns = new ArrayList<TregexPattern>();
-    List<TsurgeonPattern> tsurgeonPatterns = n
+    List<TsurgeonPattern> tsurgeonPatterns = new ArrayList<TsurgeonPattern>();
+
+    String line = null;
+    while ((line = reader.readLine()) != null) {
+      line = line.trim();
+      if (line.startsWith("#") || line.startsWith("//")) {
+        continue;
+      } 
