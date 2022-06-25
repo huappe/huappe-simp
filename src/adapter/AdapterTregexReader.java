@@ -89,4 +89,10 @@ public class AdapterTregexReader implements Closeable {
       line = line.trim();
       if (line.startsWith("#") || line.startsWith("//")) {
         continue;
-      } 
+      } else if (line.isEmpty()) {
+        add(tregexPatterns, tsurgeonPatterns, list);
+        tregexPatterns.clear();
+        tsurgeonPatterns.clear();
+        continue;
+      }
+      int index = line.indexOf(':
