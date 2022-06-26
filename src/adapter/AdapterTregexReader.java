@@ -102,4 +102,9 @@ public class AdapterTregexReader implements Closeable {
             + "]: "
             + line);
       }
-      String name = line.substring(0, inde
+      String name = line.substring(0, index).trim();
+      String value = line.substring(index + 1).trim();
+      if (name.equals("operation")) {
+        tsurgeonPatterns.add(parseOperation(value));
+      } else if (name.equals("tregex")) {
+        tregexPatterns.add(TregexPatte
