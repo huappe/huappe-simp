@@ -95,4 +95,11 @@ public class AdapterTregexReader implements Closeable {
         tsurgeonPatterns.clear();
         continue;
       }
-      int index = line.indexOf(':
+      int index = line.indexOf(':');
+      if (index == -1) {
+        throw new IllegalArgumentException("cannot parse line["
+            + reader.getLineNumber()
+            + "]: "
+            + line);
+      }
+      String name = line.substring(0, inde
