@@ -107,4 +107,13 @@ public class AdapterTregexReader implements Closeable {
       if (name.equals("operation")) {
         tsurgeonPatterns.add(parseOperation(value));
       } else if (name.equals("tregex")) {
-        tregexPatterns.add(TregexPatte
+        tregexPatterns.add(TregexPattern.compile(value));
+      } else {
+        throw new IllegalArgumentException("cannot parse line["
+            + reader.getLineNumber()
+            + "]: "
+            + line);
+      }
+
+    }
+    add(tregexPatterns, tsurgeonPat
