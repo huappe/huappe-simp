@@ -123,4 +123,11 @@ public class AdapterTregexReader implements Closeable {
   public static TsurgeonPattern parseOperation(String value) {
     String operations[] = value.split("[,]+");
     List<TsurgeonPattern> opts = new ArrayList<TsurgeonPattern>();
-    fo
+    for (String opt : operations) {
+      opts.add(Tsurgeon.parseOperation(opt));
+    }
+    return Tsurgeon.collectOperations(opts);
+  }
+
+  private void add(List<TregexPattern> tregexPatterns,
+      List<TsurgeonPattern> tsurgeonPatte
