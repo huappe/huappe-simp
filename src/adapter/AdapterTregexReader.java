@@ -130,4 +130,11 @@ public class AdapterTregexReader implements Closeable {
   }
 
   private void add(List<TregexPattern> tregexPatterns,
-      List<TsurgeonPattern> tsurgeonPatte
+      List<TsurgeonPattern> tsurgeonPatterns, List<AdapterPattern> list) {
+    for (TregexPattern tregexPattern : tregexPatterns) {
+      for (TsurgeonPattern tsurgeonPattern : tsurgeonPatterns) {
+        list.add(new AdapterPattern(tregexPattern, tsurgeonPattern));
+      }
+    }
+  }
+
