@@ -6,4 +6,14 @@ import edu.stanford.nlp.trees.Tree;
 public class OtherAdapter extends ISimpAnnotator{
 
   @Override
-  p
+  protected void annotate(Tree tree) {
+    boolean found = true;
+    while (found) {
+      found = false;
+      for (AdapterPattern p : AdapterTregexReader.getTregex()) {
+        found |= p.evaluate(tree);
+      }
+    }
+  }
+
+}
