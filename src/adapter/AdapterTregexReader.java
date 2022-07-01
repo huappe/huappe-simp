@@ -138,3 +138,9 @@ public class AdapterTregexReader implements Closeable {
     }
   }
 
+  @Override
+  public void close()
+      throws IOException {
+    reader.close();
+  }
+}
