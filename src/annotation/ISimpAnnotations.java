@@ -13,4 +13,14 @@ public class ISimpAnnotations {
       CoreAnnotation<List<SimplificationConstruct>> {
 
     @Override
-    
+    public Class<List<SimplificationConstruct>> getType() {
+      return ErasureUtils.uncheckedCast(List.class);
+    }
+
+  }
+
+  public static class ISimpSimplifiedAnnotation implements
+      CoreAnnotation<List<Tree>> {
+
+    @Override
+    p
