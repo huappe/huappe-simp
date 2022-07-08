@@ -23,4 +23,13 @@ public class ISimpAnnotations {
       CoreAnnotation<List<Tree>> {
 
     @Override
-    p
+    public Class<List<Tree>> getType() {
+      return ErasureUtils.uncheckedCast(List.class);
+    }
+
+  }
+
+  public static interface SimplificationAnnotation extends
+      CoreAnnotation<Integer> {
+
+    public String name();
