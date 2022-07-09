@@ -33,3 +33,15 @@ public class ISimpAnnotations {
       CoreAnnotation<Integer> {
 
     public String name();
+
+    public String simpleName();
+  }
+
+  public static class ParenthesisAnnotation implements SimplificationAnnotation {
+
+    @Override
+    public Class<Integer> getType() {
+      return Integer.class;
+    }
+
+  
