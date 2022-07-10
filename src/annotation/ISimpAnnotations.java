@@ -56,4 +56,18 @@ public class ISimpAnnotations {
   }
 
   public static class ParenthesisRefAnnotation implements
-      SimplificationA
+      SimplificationAnnotation {
+
+    @Override
+    public Class<Integer> getType() {
+      return Integer.class;
+    }
+
+    @Override
+    public String name() {
+      return "referred noun phrase";
+    }
+
+    @Override
+    public String simpleName() {
+   
