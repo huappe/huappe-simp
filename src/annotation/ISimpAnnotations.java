@@ -44,4 +44,16 @@ public class ISimpAnnotations {
       return Integer.class;
     }
 
-  
+    @Override
+    public String name() {
+      return "parenthesis";
+    }
+
+    @Override
+    public String simpleName() {
+      return "BRAC";
+    }
+  }
+
+  public static class ParenthesisRefAnnotation implements
+      SimplificationA
