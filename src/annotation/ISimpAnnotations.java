@@ -70,4 +70,17 @@ public class ISimpAnnotations {
 
     @Override
     public String simpleName() {
+      return "REFN";
+    }
+  }
+
+  public static class ParenthesisElemAnnotation implements
+      SimplificationAnnotation {
+
+    @Override
+    public Class<Integer> getType() {
+      return Integer.class;
+    }
+
+    @Override
    
