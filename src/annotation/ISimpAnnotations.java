@@ -93,4 +93,18 @@ public class ISimpAnnotations {
     }
   }
 
-  public static class RelativeClauseAnnotation 
+  public static class RelativeClauseAnnotation implements
+      SimplificationAnnotation {
+
+    @Override
+    public Class<Integer> getType() {
+      return Integer.class;
+    }
+
+    @Override
+    public String name() {
+      return "relative clause";
+    }
+
+    @Override
+    pub
