@@ -107,4 +107,15 @@ public class ISimpAnnotations {
     }
 
     @Override
-    pub
+    public String simpleName() {
+      return "REL";
+    }
+  }
+
+  public static class FullRelativeClauseAnnotation extends
+      RelativeClauseAnnotation {
+
+    @Override
+    public Class<Integer> getType() {
+      return Integer.class;
+    }
