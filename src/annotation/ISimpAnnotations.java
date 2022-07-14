@@ -132,4 +132,17 @@ public class ISimpAnnotations {
   }
 
   public static class RedRelativeClauseAnnotation extends
-      RelativeC
+      RelativeClauseAnnotation {
+
+    @Override
+    public Class<Integer> getType() {
+      return Integer.class;
+    }
+
+    @Override
+    public String name() {
+      return "reduced relative clause";
+    }
+
+    @Override
+    public String simpleName()
