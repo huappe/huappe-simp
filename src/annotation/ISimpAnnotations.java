@@ -145,4 +145,17 @@ public class ISimpAnnotations {
     }
 
     @Override
-    public String simpleName()
+    public String simpleName() {
+      return "RREL";
+    }
+  }
+
+  public static class RelativeClauseRefAnnotation implements
+      SimplificationAnnotation {
+
+    @Override
+    public Class<Integer> getType() {
+      return Integer.class;
+    }
+
+    @Overrid
