@@ -158,4 +158,16 @@ public class ISimpAnnotations {
       return Integer.class;
     }
 
-    @Overrid
+    @Override
+    public String name() {
+      return "referred noun phrase";
+    }
+
+    @Override
+    public String simpleName() {
+      return "REFN";
+    }
+  }
+
+  public static class RelativeClauseClauseAnnotation implements
+      Simplifica
