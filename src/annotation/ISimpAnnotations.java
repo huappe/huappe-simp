@@ -186,3 +186,15 @@ public class ISimpAnnotations {
     public String simpleName() {
       return "CLAU";
     }
+  }
+
+  public static class AppositionAnnotation implements SimplificationAnnotation {
+
+    @Override
+    public Class<Integer> getType() {
+      return Integer.class;
+    }
+
+    @Override
+    public String name() {
+      return "a
