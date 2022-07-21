@@ -197,4 +197,18 @@ public class ISimpAnnotations {
 
     @Override
     public String name() {
-      return "a
+      return "apposition";
+    }
+
+    @Override
+    public String simpleName() {
+      return "APPN";
+    }
+  }
+
+  public static class AppositionRefAnnotation implements
+      SimplificationAnnotation {
+
+    @Override
+    public Class<Integer> getType() {
+      return Integer.c
