@@ -211,4 +211,18 @@ public class ISimpAnnotations {
 
     @Override
     public Class<Integer> getType() {
-      return Integer.c
+      return Integer.class;
+    }
+
+    @Override
+    public String name() {
+      return "referred noun phrase";
+    }
+
+    @Override
+    public String simpleName() {
+      return "REFN";
+    }
+  }
+
+  public static class AppositionAppositiveAnnotation imple
