@@ -240,3 +240,16 @@ public class ISimpAnnotations {
 
     @Override
     public String simpleName() {
+      return "APPV";
+    }
+  }
+
+  public static class CoordinationAnnotation implements
+      SimplificationAnnotation {
+
+    @Override
+    public Class<Integer> getType() {
+      return Integer.class;
+    }
+
+    @Override
