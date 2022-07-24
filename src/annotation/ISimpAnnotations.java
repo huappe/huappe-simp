@@ -253,3 +253,14 @@ public class ISimpAnnotations {
     }
 
     @Override
+    public String name() {
+      return "coordination";
+    }
+
+    @Override
+    public String simpleName() {
+      return "COO";
+    }
+  }
+
+  public static class NpCoordinationAnnotation extends CoordinationAnnota
