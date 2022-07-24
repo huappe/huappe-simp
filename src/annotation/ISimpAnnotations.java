@@ -263,4 +263,17 @@ public class ISimpAnnotations {
     }
   }
 
-  public static class NpCoordinationAnnotation extends CoordinationAnnota
+  public static class NpCoordinationAnnotation extends CoordinationAnnotation {
+
+    @Override
+    public Class<Integer> getType() {
+      return Integer.class;
+    }
+
+    @Override
+    public String name() {
+      return "noun or noun phrase coordination";
+    }
+
+    @Override
+    public String simple
