@@ -276,4 +276,17 @@ public class ISimpAnnotations {
     }
 
     @Override
-    public String simple
+    public String simpleName() {
+      return "NCOO";
+    }
+  }
+
+  public static class VpCoordinationAnnotation extends CoordinationAnnotation {
+
+    @Override
+    public Class<Integer> getType() {
+      return Integer.class;
+    }
+
+    @Override
+    public String
