@@ -289,4 +289,16 @@ public class ISimpAnnotations {
     }
 
     @Override
-    public String
+    public String name() {
+      return "verb or verb phrase coordination";
+    }
+
+    @Override
+    public String simpleName() {
+      return "VCOO";
+    }
+  }
+
+  public static class PpCoordinationAnnotation extends CoordinationAnnotation {
+
+    
