@@ -301,4 +301,17 @@ public class ISimpAnnotations {
 
   public static class PpCoordinationAnnotation extends CoordinationAnnotation {
 
-    
+    @Override
+    public Class<Integer> getType() {
+      return Integer.class;
+    }
+
+    @Override
+    public String name() {
+      return "prep or prep phrase coordination";
+    }
+
+    @Override
+    public String simpleName() {
+      return "PCOO";
+    }
