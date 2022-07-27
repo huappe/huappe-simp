@@ -315,3 +315,15 @@ public class ISimpAnnotations {
     public String simpleName() {
       return "PCOO";
     }
+  }
+
+  public static class SenCoordinationAnnotation extends CoordinationAnnotation {
+
+    @Override
+    public Class<Integer> getType() {
+      return Integer.class;
+    }
+
+    @Override
+    public String name() {
+      return "sente
