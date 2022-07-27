@@ -326,4 +326,16 @@ public class ISimpAnnotations {
 
     @Override
     public String name() {
-      return "sente
+      return "sentence coordination";
+    }
+
+    @Override
+    public String simpleName() {
+      return "SCOO";
+    }
+  }
+
+  public static class AdjpCoordinationAnnotation extends CoordinationAnnotation {
+
+    @Override
+    public Class<Integer> getType() {
