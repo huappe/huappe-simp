@@ -353,4 +353,14 @@ public class ISimpAnnotations {
     }
   }
 
-  public s
+  public static class AdvpCoordinationAnnotation extends CoordinationAnnotation {
+
+    @Override
+    public Class<Integer> getType() {
+      return Integer.class;
+    }
+
+    @Override
+    public String name() {
+      return "adj or adj phrase coordination";
+  
