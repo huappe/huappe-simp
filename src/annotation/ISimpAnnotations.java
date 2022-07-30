@@ -339,3 +339,18 @@ public class ISimpAnnotations {
 
     @Override
     public Class<Integer> getType() {
+      return Integer.class;
+    }
+
+    @Override
+    public String name() {
+      return "adj or adj phrase coordination";
+    }
+
+    @Override
+    public String simpleName() {
+      return "JCOO";
+    }
+  }
+
+  public s
