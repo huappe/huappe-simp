@@ -363,4 +363,17 @@ public class ISimpAnnotations {
     @Override
     public String name() {
       return "adj or adj phrase coordination";
-  
+    }
+
+    @Override
+    public String simpleName() {
+      return "RCOO";
+    }
+  }
+
+  public static class CoordinationConjunctAnnotation implements
+      SimplificationAnnotation {
+
+    @Override
+    public Class<Integer> getType() {
+      r
