@@ -376,4 +376,18 @@ public class ISimpAnnotations {
 
     @Override
     public Class<Integer> getType() {
-      r
+      return Integer.class;
+    }
+
+    @Override
+    public String name() {
+      return "conjunct";
+    }
+
+    @Override
+    public String simpleName() {
+      return "CONJ";
+    }
+  }
+
+  public static class CoordinationConjunctionAnnotation implemen
