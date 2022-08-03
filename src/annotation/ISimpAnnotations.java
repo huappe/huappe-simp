@@ -390,4 +390,18 @@ public class ISimpAnnotations {
     }
   }
 
-  public static class CoordinationConjunctionAnnotation implemen
+  public static class CoordinationConjunctionAnnotation implements
+      SimplificationAnnotation {
+
+    @Override
+    public Class<Integer> getType() {
+      return Integer.class;
+    }
+
+    @Override
+    public String name() {
+      return "conjunction";
+    }
+
+    @Override
+    public String simpleNa
