@@ -404,4 +404,14 @@ public class ISimpAnnotations {
     }
 
     @Override
-    public String simpleNa
+    public String simpleName() {
+      return "CC";
+    }
+  }
+
+  public static class MemberCollectionAnnotation implements
+      SimplificationAnnotation {
+
+    @Override
+    public Class<Integer> getType() {
+      return Integ
