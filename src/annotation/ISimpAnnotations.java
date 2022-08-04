@@ -414,4 +414,18 @@ public class ISimpAnnotations {
 
     @Override
     public Class<Integer> getType() {
-      return Integ
+      return Integer.class;
+    }
+
+    @Override
+    public String name() {
+      return "member-collection";
+    }
+
+    @Override
+    public String simpleName() {
+      return "MEM-COL";
+    }
+  }
+
+  public static class MemberCollectionMemberAn
