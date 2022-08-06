@@ -428,4 +428,18 @@ public class ISimpAnnotations {
     }
   }
 
-  public static class MemberCollectionMemberAn
+  public static class MemberCollectionMemberAnnotation implements
+      SimplificationAnnotation {
+
+    @Override
+    public Class<Integer> getType() {
+      return Integer.class;
+    }
+
+    @Override
+    public String name() {
+      return "member";
+    }
+
+    @Override
+    public String
