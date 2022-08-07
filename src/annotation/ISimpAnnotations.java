@@ -452,4 +452,18 @@ public class ISimpAnnotations {
 
     @Override
     public Class<Integer> getType() {
-      return Intege
+      return Integer.class;
+    }
+
+    @Override
+    public String name() {
+      return "collection";
+    }
+
+    @Override
+    public String simpleName() {
+      return "COLL";
+    }
+  }
+
+  public static class HypernymyAnnotation implements SimplificationAnnotation 
