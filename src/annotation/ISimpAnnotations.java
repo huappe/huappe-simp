@@ -466,4 +466,19 @@ public class ISimpAnnotations {
     }
   }
 
-  public static class HypernymyAnnotation implements SimplificationAnnotation 
+  public static class HypernymyAnnotation implements SimplificationAnnotation {
+
+    @Override
+    public Class<Integer> getType() {
+      return Integer.class;
+    }
+
+    @Override
+    public String name() {
+      return "hypernymy";
+    }
+
+    @Override
+    public String simpleName() {
+      return "HYP";
+    }
