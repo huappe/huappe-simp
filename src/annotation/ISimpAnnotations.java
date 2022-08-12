@@ -493,4 +493,18 @@ public class ISimpAnnotations {
     }
 
     @Override
-    public String n
+    public String name() {
+      return "hypernym";
+    }
+
+    @Override
+    public String simpleName() {
+      return "HYPE";
+    }
+  }
+
+  public static class HypernymyHyponymAnnotation implements
+      SimplificationAnnotation {
+
+    @Override
+  
