@@ -507,4 +507,17 @@ public class ISimpAnnotations {
       SimplificationAnnotation {
 
     @Override
-  
+    public Class<Integer> getType() {
+      return Integer.class;
+    }
+
+    @Override
+    public String name() {
+      return "hyponym";
+    }
+
+    @Override
+    public String simpleName() {
+      return "HYPO";
+    }
+  }
