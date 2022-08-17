@@ -13,4 +13,10 @@
 //import edu.stanford.nlp.trees.Treebank;
 //import edu.stanford.nlp.util.CoreMap;
 //
-//public class Copy
+//public class CopyOfISimpParser extends StanfordCoreNLP {
+//
+//  public static final Properties DEFAULT_PROPS = new Properties();
+//  // public static final Properties PROPS_WITHOUT_TOKENZIE = new Properties();
+//
+//  static {
+//    // creates a
