@@ -19,4 +19,7 @@
 //  // public static final Properties PROPS_WITHOUT_TOKENZIE = new Properties();
 //
 //  static {
-//    // creates a
+//    // creates a StanfordCoreNLP object, with POS tagging, lemmatization, NER,
+//    // parsing, and coreference resolution
+//    DEFAULT_PROPS.put("annotators", "tokenize, ssplit, pos, parse");
+//    DEFAULT_PROPS.put("tokenize.options", "a
