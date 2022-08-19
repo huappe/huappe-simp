@@ -22,4 +22,10 @@
 //    // creates a StanfordCoreNLP object, with POS tagging, lemmatization, NER,
 //    // parsing, and coreference resolution
 //    DEFAULT_PROPS.put("annotators", "tokenize, ssplit, pos, parse");
-//    DEFAULT_PROPS.put("tokenize.options", "a
+//    DEFAULT_PROPS.put("tokenize.options", "americanize=false,"
+//        + "normalizeCurrency=false,"
+//        + "normalizeFractions=false,"
+//        // + "normalizeParentheses=false,"
+//        // + "normalizeOtherBrackets=false,"
+//        // + "asciiQuotes=false,"
+//        // + "latexQuo
