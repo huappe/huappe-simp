@@ -28,4 +28,9 @@
 //        // + "normalizeParentheses=false,"
 //        // + "normalizeOtherBrackets=false,"
 //        // + "asciiQuotes=false,"
-//        // + "latexQuo
+//        // + "latexQuotes=false,"
+//        + "untokenizable=allKeep,"
+//        + "ptb3Dashes=false,"
+//        + "escapeForwardSlashAsterisk=false,"
+//        + "ssplit.eolonly=true");
+//    // creates a StanfordCoreNLP object, with POS tagging, lemmat
