@@ -33,4 +33,11 @@
 //        + "ptb3Dashes=false,"
 //        + "escapeForwardSlashAsterisk=false,"
 //        + "ssplit.eolonly=true");
-//    // creates a StanfordCoreNLP object, with POS tagging, lemmat
+//    // creates a StanfordCoreNLP object, with POS tagging, lemmatization, NER,
+//    // parsing, and coreference resolution
+//    // PROPS_WITHOUT_TOKENZIE.put("annotators",
+//    // "tokenize, ssplit, pos, parse");
+//    // PROPS_WITHOUT_TOKENZIE.put("tokenized", "true");
+//  }
+//
+//  public CopyOfISimpPa
