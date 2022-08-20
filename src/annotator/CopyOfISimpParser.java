@@ -40,4 +40,15 @@
 //    // PROPS_WITHOUT_TOKENZIE.put("tokenized", "true");
 //  }
 //
-//  public CopyOfISimpPa
+//  public CopyOfISimpParser() {
+//    super(DEFAULT_PROPS);
+//  }
+//
+//  public CopyOfISimpParser(Properties props) {
+//    super(props);
+//  }
+//
+//  public static class ISimpParserBuilder {
+//
+//    private boolean isTokenized;
+// 
