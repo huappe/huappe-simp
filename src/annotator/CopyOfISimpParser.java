@@ -51,4 +51,14 @@
 //  public static class ISimpParserBuilder {
 //
 //    private boolean isTokenized;
-// 
+//    private boolean isSSplitted;
+//
+//    public ISimpParserBuilder() {
+//      isTokenized = false;
+//      isSSplitted = false;
+//    }
+//
+//    /**
+//     * if set , separates words only when whitespace is encountered.
+//     * 
+//     * @return
