@@ -62,3 +62,15 @@
 //     * if set , separates words only when whitespace is encountered.
 //     * 
 //     * @return
+//     */
+//    public ISimpParserBuilder setTokenized() {
+//      isTokenized = true;
+//      return this;
+//    }
+//
+//    /**
+//     * if set, only splits sentences on newlines.
+//     * 
+//     * @return
+//     */
+//    public ISimpParserBu
