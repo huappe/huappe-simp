@@ -73,4 +73,11 @@
 //     * 
 //     * @return
 //     */
-//    public ISimpParserBu
+//    public ISimpParserBuilder setSSplitted() {
+//      isSSplitted = true;
+//      return this;
+//    }
+//
+//    public Annotator create() {
+//      Properties props = new Properties();
+//      props.put("annotators", "tok
