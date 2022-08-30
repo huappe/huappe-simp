@@ -80,4 +80,10 @@
 //
 //    public Annotator create() {
 //      Properties props = new Properties();
-//      props.put("annotators", "tok
+//      props.put("annotators", "tokenize, ssplit, pos, parse");
+//      if (isTokenized && isSSplitted) {
+//        props.put("tokenize.whitespace", "true");
+//        props.put("ssplit.eolonly", "true");
+//      } else if (isTokenized && !isSSplitted) {
+//
+//      } els
