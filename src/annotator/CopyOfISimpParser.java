@@ -91,4 +91,8 @@
 //            + "normalizeCurrency=false,"
 //            + "normalizeFractions=false,"
 //            // + "normalizeParentheses=false,"
-//  
+//            // + "normalizeOtherBrackets=false,"
+//            // + "asciiQuotes=false,"
+//            // + "latexQuotes=false,"
+//            + "untokenizable=allKeep,"
+//            + "ptb3Dashes=false,"
