@@ -96,3 +96,7 @@
 //            // + "latexQuotes=false,"
 //            + "untokenizable=allKeep,"
 //            + "ptb3Dashes=false,"
+//            + "escapeForwardSlashAsterisk=false");
+//        props.put("ssplit.eolonly", "true");
+//      } else if (!isTokenized && !isSSplitted) {
+//        props.put("tokenize.options", "america
