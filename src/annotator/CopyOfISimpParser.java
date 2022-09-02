@@ -104,4 +104,11 @@
 //            + "normalizeFractions=false,"
 //            // + "normalizeParentheses=false,"
 //            // + "normalizeOtherBrackets=false,"
-//            // + "asciiQuotes
+//            // + "asciiQuotes=false,"
+//            // + "latexQuotes=false,"
+//            + "untokenizable=allKeep,"
+//            + "ptb3Dashes=false,"
+//            + "escapeForwardSlashAsterisk=false");
+//      }
+//
+//      return new CopyOfISimpParse
