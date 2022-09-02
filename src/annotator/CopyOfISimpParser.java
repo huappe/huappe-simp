@@ -99,4 +99,9 @@
 //            + "escapeForwardSlashAsterisk=false");
 //        props.put("ssplit.eolonly", "true");
 //      } else if (!isTokenized && !isSSplitted) {
-//        props.put("tokenize.options", "america
+//        props.put("tokenize.options", "americanize=false,"
+//            + "normalizeCurrency=false,"
+//            + "normalizeFractions=false,"
+//            // + "normalizeParentheses=false,"
+//            // + "normalizeOtherBrackets=false,"
+//            // + "asciiQuotes
