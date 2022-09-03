@@ -119,4 +119,11 @@
 //    Treebank treebank = new MemoryTreebank();
 //    Annotation document = new Annotation(text);
 //    annotate(document);
-//    List<CoreMap> sent
+//    List<CoreMap> sentences = document.get(SentencesAnnotation.class);
+//    for (CoreMap sentence : sentences) {
+//      Tree tree = sentence.get(TreeAnnotation.class);
+//      treebank.add(tree);
+//    }
+//    return treebank;
+//  }
+//}
