@@ -111,4 +111,12 @@
 //            + "escapeForwardSlashAsterisk=false");
 //      }
 //
-//      return new CopyOfISimpParse
+//      return new CopyOfISimpParser(props);
+//    }
+//  }
+//
+//  public Treebank parse(String text) {
+//    Treebank treebank = new MemoryTreebank();
+//    Annotation document = new Annotation(text);
+//    annotate(document);
+//    List<CoreMap> sent
