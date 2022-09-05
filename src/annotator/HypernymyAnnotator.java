@@ -13,4 +13,12 @@ import edu.stanford.nlp.trees.tregex.TregexMatcher;
 
 public class HypernymyAnnotator extends ISimpAnnotator {
 
-  @Overri
+  @Override
+  public void annotate(Tree root) {
+    int index = 0;
+
+    List<DetectionPattern> list = DetectionTregexReader
+        .getTregex(DetectionTregexReader.Hypernymy);
+
+    for (DetectionPattern p : list) {
+      TregexMatcher m
