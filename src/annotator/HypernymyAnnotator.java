@@ -21,4 +21,9 @@ public class HypernymyAnnotator extends ISimpAnnotator {
         .getTregex(DetectionTregexReader.Hypernymy);
 
     for (DetectionPattern p : list) {
-      TregexMatcher m
+      TregexMatcher m = p.getTregexPattern().matcher(root);
+      while (m.find()) {
+        Tree matched = m.getMatch();
+
+        CoreLabel label = (CoreLabel) matched.label();
+        if (label.get(HypernymyAnnotation.cla
