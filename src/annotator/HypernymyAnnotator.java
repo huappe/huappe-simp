@@ -26,4 +26,9 @@ public class HypernymyAnnotator extends ISimpAnnotator {
         Tree matched = m.getMatch();
 
         CoreLabel label = (CoreLabel) matched.label();
-        if (label.get(HypernymyAnnotation.cla
+        if (label.get(HypernymyAnnotation.class) == null) {
+          label.set(HypernymyAnnotation.class, index);
+          // ref
+          Tree ref = m.getNode("hype");
+          label = (CoreLabel) ref.label();
+          label.set(HypernymyHypernymAnnotation.cla
