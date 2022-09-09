@@ -31,4 +31,14 @@ public class HypernymyAnnotator extends ISimpAnnotator {
           // ref
           Tree ref = m.getNode("hype");
           label = (CoreLabel) ref.label();
-          label.set(HypernymyHypernymAnnotation.cla
+          label.set(HypernymyHypernymAnnotation.class, index);
+          // elements
+          Tree clause = m.getNode("hypo");
+          label = (CoreLabel) clause.label();
+          label.set(HypernymyHyponymAnnotation.class, index);
+          index++;
+        }
+      }
+    }
+  }
+}
