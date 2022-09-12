@@ -18,4 +18,15 @@ public abstract class ISimpAnnotator implements Annotator {
 
   @Override
   public Set<Requirement> requirementsSatisfied() {
- 
+    return Collections.singleton(ISMP_TREE);
+  }
+
+  @Override
+  public Set<Requirement> requires() {
+    return TOKENIZE_SSPLIT_PARSE;
+  }
+
+  @Override
+  public final void annotate(Annotation annotation) {
+
+    if (annotati
