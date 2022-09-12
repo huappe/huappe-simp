@@ -29,4 +29,7 @@ public abstract class ISimpAnnotator implements Annotator {
   @Override
   public final void annotate(Annotation annotation) {
 
-    if (annotati
+    if (annotation.containsKey(SentencesAnnotation.class)) {
+      for (CoreMap sentence : annotation.get(SentencesAnnotation.class)) {
+        if (sentence.containsKey(TreeAnnotation.class)) {
+          Tree root = sentence.get(TreeAnno
