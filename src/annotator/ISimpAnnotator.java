@@ -32,4 +32,12 @@ public abstract class ISimpAnnotator implements Annotator {
     if (annotation.containsKey(SentencesAnnotation.class)) {
       for (CoreMap sentence : annotation.get(SentencesAnnotation.class)) {
         if (sentence.containsKey(TreeAnnotation.class)) {
-          Tree root = sentence.get(TreeAnno
+          Tree root = sentence.get(TreeAnnotation.class);
+          annotate(root);
+        } else {
+          throw new RuntimeException("unable to find tree in: "
+              + sentence.get(TextAnnotation.class));
+        }
+      }
+    } else {
+      throw new RuntimeException
