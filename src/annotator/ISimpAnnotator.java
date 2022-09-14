@@ -40,4 +40,9 @@ public abstract class ISimpAnnotator implements Annotator {
         }
       }
     } else {
-      throw new RuntimeException
+      throw new RuntimeException("unable to find sentences in: " + annotation);
+    }
+  }
+
+  protected abstract void annotate(Tree t);
+}
