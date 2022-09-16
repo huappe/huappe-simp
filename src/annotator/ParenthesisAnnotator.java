@@ -9,4 +9,11 @@ import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.tregex.TregexMatcher;
 
-public class Parenthesis
+public class ParenthesisAnnotator extends ISimpAnnotator {
+
+  @Override
+  public void annotate(Tree root) {
+    int index = 0;
+    // parenthesis.txt
+    for (DetectionPattern p : DetectionTregexReader
+        .getTregex(DetectionTregexReader.ParentThesis)
