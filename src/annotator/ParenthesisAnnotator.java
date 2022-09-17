@@ -16,4 +16,10 @@ public class ParenthesisAnnotator extends ISimpAnnotator {
     int index = 0;
     // parenthesis.txt
     for (DetectionPattern p : DetectionTregexReader
-        .getTregex(DetectionTregexReader.ParentThesis)
+        .getTregex(DetectionTregexReader.ParentThesis)) {
+      TregexMatcher m = p.getTregexPattern().matcher(root);
+      while (m.find()) {
+        Tree matched = m.getMatch();
+        CoreLabel label = (CoreLabel) matched.label();
+        if (label.get(ParenthesisAnnotation.class) == null) {
+          label.set(P
