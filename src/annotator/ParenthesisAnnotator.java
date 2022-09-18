@@ -22,4 +22,10 @@ public class ParenthesisAnnotator extends ISimpAnnotator {
         Tree matched = m.getMatch();
         CoreLabel label = (CoreLabel) matched.label();
         if (label.get(ParenthesisAnnotation.class) == null) {
-          label.set(P
+          label.set(ParenthesisAnnotation.class, index);
+          // ref
+          Tree ref = m.getNode("ref");
+          label = (CoreLabel) ref.label();
+          label.set(ParenthesisRefAnnotation.class, index);
+          // elements
+    
