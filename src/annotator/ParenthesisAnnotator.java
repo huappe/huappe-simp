@@ -28,4 +28,12 @@ public class ParenthesisAnnotator extends ISimpAnnotator {
           label = (CoreLabel) ref.label();
           label.set(ParenthesisRefAnnotation.class, index);
           // elements
-    
+          Tree elemens = m.getNode("elements");
+          label = (CoreLabel) elemens.label();
+          label.set(ParenthesisElemAnnotation.class, index);
+          index++;
+        }
+      }
+    }
+  }
+}
