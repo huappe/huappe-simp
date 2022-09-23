@@ -16,4 +16,9 @@ import edu.stanford.nlp.trees.tregex.TregexMatcher;
 public class RelativeClauseAnnotator extends ISimpAnnotator {
 
   @Override
-  public void annotate(Tree root)
+  public void annotate(Tree root) {
+    int index = 0;
+    List<DetectionPattern> list = DetectionTregexReader
+        .getTregex(DetectionTregexReader.RelativeClause);
+    for (DetectionPattern p : list) {
+      TregexMatcher m = p.getTregexPattern()
