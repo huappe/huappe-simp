@@ -9,4 +9,11 @@ import annotation.ISimpAnnotations.RelativeClauseClauseAnnotation;
 import annotation.ISimpAnnotations.RelativeClauseRefAnnotation;
 import detect.DetectionPattern;
 import detect.DetectionTregexReader;
-import e
+import edu.stanford.nlp.ling.CoreLabel;
+import edu.stanford.nlp.trees.Tree;
+import edu.stanford.nlp.trees.tregex.TregexMatcher;
+
+public class RelativeClauseAnnotator extends ISimpAnnotator {
+
+  @Override
+  public void annotate(Tree root)
