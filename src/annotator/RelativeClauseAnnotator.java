@@ -21,4 +21,9 @@ public class RelativeClauseAnnotator extends ISimpAnnotator {
     List<DetectionPattern> list = DetectionTregexReader
         .getTregex(DetectionTregexReader.RelativeClause);
     for (DetectionPattern p : list) {
-      TregexMatcher m = p.getTregexPattern()
+      TregexMatcher m = p.getTregexPattern().matcher(root);
+      while (m.find()) {
+        Tree matched = m.getMatch();
+        CoreLabel label = (CoreLabel) matched.label();
+        if (label.get(RelativeClauseAnnotation.class) == null
+            || label.get(FullRelat
