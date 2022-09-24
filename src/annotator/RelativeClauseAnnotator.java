@@ -26,4 +26,9 @@ public class RelativeClauseAnnotator extends ISimpAnnotator {
         Tree matched = m.getMatch();
         CoreLabel label = (CoreLabel) matched.label();
         if (label.get(RelativeClauseAnnotation.class) == null
-            || label.get(FullRelat
+            || label.get(FullRelativeClauseAnnotation.class) == null
+            || label.get(RedRelativeClauseAnnotation.class) == null) {
+          // ref
+          Tree ref = m.getNode("ref");
+          label = (CoreLabel) ref.label();
+          label.set(Relati
