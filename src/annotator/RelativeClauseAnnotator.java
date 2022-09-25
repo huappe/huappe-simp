@@ -31,4 +31,10 @@ public class RelativeClauseAnnotator extends ISimpAnnotator {
           // ref
           Tree ref = m.getNode("ref");
           label = (CoreLabel) ref.label();
-          label.set(Relati
+          label.set(RelativeClauseRefAnnotation.class, index);
+          // elements
+          Tree clause = m.getNode("clause");
+          CoreLabel clLabel = (CoreLabel) clause.label();
+          clLabel.set(RelativeClauseClauseAnnotation.class, index);
+          // subcategorize
+        
