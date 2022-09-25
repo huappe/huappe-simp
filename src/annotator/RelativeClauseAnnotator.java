@@ -37,4 +37,7 @@ public class RelativeClauseAnnotator extends ISimpAnnotator {
           CoreLabel clLabel = (CoreLabel) clause.label();
           clLabel.set(RelativeClauseClauseAnnotation.class, index);
           // subcategorize
-        
+          label = (CoreLabel) matched.label();
+          if (clLabel.value().startsWith("S")) {
+            label.set(FullRelativeClauseAnnotation.class, index);
+          } else if (clLabel.value().startsWith
