@@ -40,4 +40,16 @@ public class RelativeClauseAnnotator extends ISimpAnnotator {
           label = (CoreLabel) matched.label();
           if (clLabel.value().startsWith("S")) {
             label.set(FullRelativeClauseAnnotation.class, index);
-          } else if (clLabel.value().startsWith
+          } else if (clLabel.value().startsWith("V")) {
+            label.set(RedRelativeClauseAnnotation.class, index);
+          } else {
+            label.set(RelativeClauseAnnotation.class, index);
+          }
+          index++;
+        }
+      }
+    }
+
+  }
+
+}
