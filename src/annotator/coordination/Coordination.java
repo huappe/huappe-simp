@@ -8,4 +8,8 @@ import edu.stanford.nlp.util.Pair;
 
 public abstract class Coordination {
 
-  protected static final Tr
+  protected static final TregexPattern   conjPattern = TregexPattern
+                                                         .compile("__ < CC|CONJP");
+  public LinkedList<Pair<Integer, Tree>> conjuncts;
+  public Tree                            conjunction;
+  public 
