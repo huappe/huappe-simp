@@ -18,4 +18,13 @@ public abstract class Coordination {
   public Coordination(Tree root, Tree coordination) {
     this.root = root;
     this.coordination = coordination;
-    conjuncts = new LinkedLis
+    conjuncts = new LinkedList<Pair<Integer, Tree>>();
+  }
+
+  public abstract boolean isCoordination();
+
+  protected boolean isCC(Tree t) {
+    return t.value().equals("CC") || t.value().equals("CONJP");
+  }
+
+  protected boolean isComma(Tree t) 
