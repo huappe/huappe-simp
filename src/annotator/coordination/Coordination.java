@@ -12,4 +12,10 @@ public abstract class Coordination {
                                                          .compile("__ < CC|CONJP");
   public LinkedList<Pair<Integer, Tree>> conjuncts;
   public Tree                            conjunction;
-  public 
+  public Tree                            root;
+  public Tree                            coordination;
+
+  public Coordination(Tree root, Tree coordination) {
+    this.root = root;
+    this.coordination = coordination;
+    conjuncts = new LinkedLis
