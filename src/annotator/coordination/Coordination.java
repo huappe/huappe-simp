@@ -27,4 +27,11 @@ public abstract class Coordination {
     return t.value().equals("CC") || t.value().equals("CONJP");
   }
 
-  protected boolean isComma(Tree t) 
+  protected boolean isComma(Tree t) {
+    return t.value().equals(",")
+        || t.value().equals(".")
+        || t.value().equals(";")
+        || t.value().equals(":");
+  }
+
+}
