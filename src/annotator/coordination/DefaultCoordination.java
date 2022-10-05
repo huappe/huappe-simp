@@ -34,4 +34,10 @@ public class DefaultCoordination extends Coordination {
       Tree child = parent.getChild(i);
       if (isComma(child) || isCC(child)) {
         conjunction = child;
-      } el
+      } else {
+        conjuncts.add(new Pair<Integer, Tree>(i, child));
+      }
+    }
+    return true;
+  }
+}
