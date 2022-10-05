@@ -27,4 +27,11 @@ public class DefaultCoordination extends Coordination {
     }
     if (isCCOnlyFirst) {
       return false;
- 
+    }
+
+    conjuncts.clear();
+    for (int i = 0; i < parent.numChildren(); i++) {
+      Tree child = parent.getChild(i);
+      if (isComma(child) || isCC(child)) {
+        conjunction = child;
+      } el
