@@ -12,4 +12,14 @@ public class GeneralCoordination extends Coordination {
 
   @Override
   public boolean isCoordination() {
-    TregexMatcher m = conjPattern.match
+    TregexMatcher m = conjPattern.matcher(coordination);
+    if (!m.find()) {
+      return false;
+    }
+
+    Tree parent = m.getMatch();
+    boolean hasCC = false;
+    conjuncts.clear();
+    int state = 0;
+    for (int i = 0; i < parent.numChildren(); i++) {
+      Tree child 
