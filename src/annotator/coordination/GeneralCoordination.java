@@ -22,4 +22,13 @@ public class GeneralCoordination extends Coordination {
     conjuncts.clear();
     int state = 0;
     for (int i = 0; i < parent.numChildren(); i++) {
-      Tree child 
+      Tree child = parent.getChild(i);
+      switch (state) {
+      case 0:
+        if (isCC(child)) {
+          conjunction = child;
+          state = 1;
+        } else if (isComma(child)) {
+          return false;
+        } else {
+          conjuncts.add(new 
