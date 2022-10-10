@@ -31,4 +31,13 @@ public class GeneralCoordination extends Coordination {
         } else if (isComma(child)) {
           return false;
         } else {
-          conjuncts.add(new 
+          conjuncts.add(new Pair<Integer, Tree>(i, child));
+          state = 2;
+        }
+        break;
+      case 1:
+        conjuncts.add(new Pair<Integer, Tree>(i, child));
+        state = 2;
+        break;
+      case 2:
+    
