@@ -40,4 +40,14 @@ public class GeneralCoordination extends Coordination {
         state = 2;
         break;
       case 2:
-    
+        if (isCC(child)) {
+          conjunction = child;
+          state = 4;
+        } else if (isComma(child)) {
+          state = 3;
+        } else {
+          return false;
+        }
+        break;
+      case 3:
+        if (isCC(chi
