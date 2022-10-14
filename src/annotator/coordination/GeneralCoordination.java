@@ -57,4 +57,10 @@ public class GeneralCoordination extends Coordination {
           conjuncts.add(new Pair<Integer, Tree>(i, child));
           state = 2;
         }
-        brea
+        break;
+      case 4:
+        if (child.value().equals("ADVP")
+            && !conjuncts.get(0).second.value().equals("ADVP")) {
+          ;
+        } else if (child.value().equals("RB")
+            && !conjuncts.get(0).second.
