@@ -50,4 +50,11 @@ public class GeneralCoordination extends Coordination {
         }
         break;
       case 3:
-        if (isCC(chi
+        if (isCC(child) && i != parent.numChildren() - 1) {
+          conjunction = child;
+          state = 4;
+        } else {
+          conjuncts.add(new Pair<Integer, Tree>(i, child));
+          state = 2;
+        }
+        brea
