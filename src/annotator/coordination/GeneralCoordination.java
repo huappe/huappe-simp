@@ -63,4 +63,14 @@ public class GeneralCoordination extends Coordination {
             && !conjuncts.get(0).second.value().equals("ADVP")) {
           ;
         } else if (child.value().equals("RB")
-            && !conjuncts.get(0).second.
+            && !conjuncts.get(0).second.value().equals("RB")) {
+          ;
+        } else {
+          hasCC = true;
+          conjuncts.add(new Pair<Integer, Tree>(i, child));
+          state = 5;
+        }
+        break;
+      default:
+        if (isComma(child)) {
+
