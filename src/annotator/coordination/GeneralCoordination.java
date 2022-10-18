@@ -74,3 +74,15 @@ public class GeneralCoordination extends Coordination {
       default:
         if (isComma(child)) {
 
+        } else {
+          hasCC = false;
+        }
+      }
+    }
+    if (!hasCC) {
+      return false;
+    }
+    // isomorphic
+    // only compare the first and last conjuncts
+    Tree first = conjuncts.getFirst().second;
+    T
