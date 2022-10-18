@@ -85,4 +85,10 @@ public class GeneralCoordination extends Coordination {
     // isomorphic
     // only compare the first and last conjuncts
     Tree first = conjuncts.getFirst().second;
-    T
+    Tree last = conjuncts.getLast().second;
+    if (first.numChildren() == 1 && last.numChildren() == 1) {
+      if (first.firstChild().isLeaf() && last.firstChild().isLeaf()) {
+        return true;
+      }
+    }
+    return isIsomorp
