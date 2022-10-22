@@ -1,12 +1,20 @@
+
 package annotator.coordination;
 
+import java.util.regex.Pattern;
+
+import utils.PtbUtils;
 import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.tregex.TregexMatcher;
 import edu.stanford.nlp.util.Pair;
 
-public class GeneralCoordination extends Coordination {
+public class IsomorphicCoordination extends Coordination {
 
-  public GeneralCoordination(Tree root, Tree coordination) {
+  private static final Pattern vbPattern = Pattern
+                                             .compile("VBZ|VBG|VBN|VBD|VBP");
+  private static final Pattern sPattern  = Pattern.compile("S|SBAR");
+
+  public IsomorphicCoordination(Tree root, Tree coordination) {
     super(root, coordination);
   }
 
@@ -95,7 +103,57 @@ public class GeneralCoordination extends Coordination {
   }
 
   private boolean isIsomorphic(Tree t1, Tree t2) {
-    return true;
+    if (t1.value().equals("NP") && t2.value().equals("NP")) {
+      return isIsomorphicNp(t1, t2);
+    }
+    if (t1.value().equals("PP") && t2.value().equals("PP")) {
+      return isIsomorphicPp(t1, t2);
+    }
+    if (t1.value().equals("VP") && t2.value().equals("VP")) {
+      return isIsomorphicVp(t1, t2);
+    }
+    if (t1.value().equals("ADJP") && t2.value().equals("ADJP")) {
+      return isIsomorphicAdjp(t1, t2);
+    }
+    if (sPattern.matcher(t1.value()).find()
+        && sPattern.matcher(t2.value()).find()) {
+      return isIsomorphicS(t1, t2);
+    }
+    return isIsomorphicGeneral(t1, t2);
   }
 
-}
+  private boolean isIsomorphicAdjp(Tree t1, Tree t2) {
+    if (t1.numChildren() == 1 && t2.numChildren() == 1) {
+      return true;
+    }
+    if (t1.lastChild().value().equals("JJ")
+        && t2.lastChild().value().equals("JJ")) {
+      return true;
+    }
+    if (t1.lastChild().value().equals("VBG")
+        && t2.lastChild().value().equals("VBG")) {
+      return true;
+    }
+    return isIsomorphicGeneral(t1, t2);
+  }
+
+  private boolean isIsomorphicVp(Tree t1, Tree t2) {
+    t1 = RightMostVp.rightMostVp(t1);
+    t2 = RightMostVp.rightMostVp(t2);
+
+    if (t2.numChildren() == 1) {
+      return true;
+    }
+    if (t1.numChildren() == 1 && t2.numChildren() == 1) {
+      return true;
+    }
+    if (t1.numChildren() >= 3 && t2.numChildren() >= 3) {
+      return true;
+    }
+    if (t1.lastChild().value().equals("NP")
+        && t2.lastChild().value().equals("NP")) {
+      return true;
+    }
+    if (t1.lastChild().value().equals("NP")
+        && t2.lastChild().value().equals("S")) {
+      return true;
