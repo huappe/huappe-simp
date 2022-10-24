@@ -157,3 +157,146 @@ public class IsomorphicCoordination extends Coordination {
     if (t1.lastChild().value().equals("NP")
         && t2.lastChild().value().equals("S")) {
       return true;
+    }
+    if (t1.lastChild().value().equals("PP")
+        && t2.lastChild().value().equals("PP")) {
+      return true;
+    }
+    // t1 contains NP
+    for (Tree t : t1.preOrderNodeList()) {
+      if (t.value().equals("NP")) {
+        return true;
+      }
+    }
+    return isIsomorphicGeneral(t1, t2);
+  }
+
+  private boolean isIsomorphicNp(Tree t1, Tree t2) {
+    if (t1.numChildren() == 1 && t2.numChildren() == 1) {
+      return true;
+    }
+    if (t1.numChildren() == 2 && t2.numChildren() == 2) {
+      if (t1.getChild(0).value().equals("NP")
+          && t1.getChild(1).value().equals("PP")
+            && t2.getChild(0).value().equals("NP")
+            && t2.getChild(1).value().equals("PP")) {
+        return isIsomorphicNpPp(t1, t2);
+      } else {
+        return isIsomorphicGeneral(t1, t2);
+      }
+    }
+    if (t1.lastChild().value().equals("NN")
+        && t2.lastChild().value().equals("NN")) {
+      Tree rightMostLeaf1 = PtbUtils.lastLeaf(t1);
+      Tree rightMostLeaf2 = PtbUtils.lastLeaf(t2);
+      if (rightMostLeaf1.value().endsWith("ion")
+          && rightMostLeaf2.value().endsWith("ion")) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    if (t1.getChild(t1.numChildren() - 1).value().equals("NNS")
+        && t2.getChild(t2.numChildren() - 1).value().equals("NNS")) {
+      return true;
+    }
+    if (t1.lastChild().value().equals("NNP")
+        && t2.lastChild().value().equals("NNP")) {
+      return true;
+    }
+    if (t1.lastChild().value().equals("NNS")
+        && t2.lastChild().value().equals("NN")) {
+      return true;
+    }
+    return isIsomorphicGeneral(t1, t2);
+  }
+
+  private boolean isIsomorphicNpPp(Tree t1, Tree t2) {
+    Tree inLeaf1 = PtbUtils.firstLeaf(t1.getChild(1));
+    Tree inLeaf2 = PtbUtils.firstLeaf(t2.getChild(1));
+    if (inLeaf1.value().equals(inLeaf2.value())) {
+      return true;
+    }
+    return false;
+
+  }
+
+  private boolean isIsomorphicPp(Tree t1, Tree t2) {
+    if (t1.numChildren() == 1 && t2.numChildren() == 1) {
+      return true;
+    }
+    if (t1.numChildren() == 2 && t2.numChildren() == 2) {
+      if (t1.getChild(0).value().equals("IN")
+          && t1.getChild(1).value().equals("NP")
+            && t2.getChild(0).value().equals("IN")
+            && t2.getChild(1).value().equals("NP")) {
+        return true;
+      }
+    }
+    if (t1.numChildren() == 2 && t2.numChildren() == 3) {
+      if (t1.getChild(0).value().equals("IN")
+          && t1.getChild(1).value().equals("NP")
+            && t2.getChild(1).value().equals("IN")
+            && t2.getChild(2).value().equals("NP")) {
+        return true;
+      }
+    }
+    if (t1.numChildren() == 3 && t2.numChildren() == 2) {
+      if (t1.getChild(1).value().equals("IN")
+          && t1.getChild(2).value().equals("NP")
+            && t2.getChild(0).value().equals("IN")
+            && t2.getChild(1).value().equals("NP")) {
+        return true;
+      }
+    }
+    return isIsomorphicGeneral(t1, t2);
+  }
+
+  private boolean isIsomorphicS(Tree t1, Tree t2) {
+    return true;
+  }
+
+  /**
+   * check whether t1 and t2 has same structure
+   * 
+   * @param t1
+   * @param t2
+   * @return
+   */
+  private boolean isIsomorphicGeneral(Tree t1, Tree t2) {
+    if (t1.isLeaf() && t2.isLeaf()) {
+      return true;
+    }
+    if (!isIsomorphicTag(t1, t2)) {
+      return false;
+    }
+    if (t1.numChildren() != t2.numChildren()) {
+      return false;
+    }
+    for (int i = 0; i < t1.numChildren(); i++) {
+      Tree c1 = t1.getChild(i);
+      Tree c2 = t2.getChild(i);
+      if (!isIsomorphic(c1, c2)) {
+        return false;
+      }
+    }
+    return true;
+
+  }
+
+  private boolean isIsomorphicTag(Tree t1, Tree t2) {
+    if (t1.value().equals(t2.value())) {
+      return true;
+    }
+    if (vbPattern.matcher(t1.value()).find()
+        && vbPattern.matcher(t2.value()).find()) {
+      return true;
+    }
+    if (sPattern.matcher(t1.value()).find()
+        && sPattern.matcher(t2.value()).find()) {
+      return true;
+    }
+    return false;
+  }
+
+}
