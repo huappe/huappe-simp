@@ -13,4 +13,11 @@ public class RightMostVp {
   private static TregexPattern p2 = TregexPattern
                                       .compile("ADJP=p <1 @/JJ/ <2 (S=s <: VP=vp) <- =s");
 
-  public sta
+  public static Tree rightMostVp(Tree vp) {
+    TregexMatcher m1 = p1.matcher(vp);
+    if (find(m1, vp)) {
+      return rightMostVp(m1.getNode("vp"));
+    }
+
+    List<Tree> children = vp.getChildrenAsList();
+    for (int i = chi
