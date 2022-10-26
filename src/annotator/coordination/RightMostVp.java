@@ -20,4 +20,10 @@ public class RightMostVp {
     }
 
     List<Tree> children = vp.getChildrenAsList();
-    for (int i = chi
+    for (int i = children.size() - 1; i >= 0; i--) {
+      Tree child = children.get(i);
+      if (child.value().startsWith("VP")) {
+        return rightMostVp(child);
+      }
+      if (child.value().startsWith("ADJP")) {
+        Tree foundVp 
