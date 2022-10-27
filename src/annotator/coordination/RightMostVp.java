@@ -26,4 +26,15 @@ public class RightMostVp {
         return rightMostVp(child);
       }
       if (child.value().startsWith("ADJP")) {
-        Tree foundVp 
+        Tree foundVp = rightMostAdjp(child);
+        if (foundVp != null) {
+          return foundVp;
+        }
+      }
+    }
+    return vp;
+  }
+
+  private static Tree rightMostAdjp(Tree adjp) {
+    TregexMatcher m1 = p2.matcher(adjp);
+    
