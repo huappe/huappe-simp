@@ -37,4 +37,13 @@ public class RightMostVp {
 
   private static Tree rightMostAdjp(Tree adjp) {
     TregexMatcher m1 = p2.matcher(adjp);
-    
+    if (find(m1, adjp)) {
+      return rightMostVp(m1.getNode("vp"));
+    }
+    return null;
+  }
+
+  private static boolean find(TregexMatcher m, Tree vp) {
+    return m.find() && m.getNode("p") == vp;
+  }
+}
