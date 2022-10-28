@@ -11,4 +11,13 @@ public class DetectionPattern {
     this.tregexPattern = tregexPattern;
   }
 
-  public final Treg
+  public final TregexPattern getTregexPattern() {
+    return tregexPattern;
+  }
+
+
+  @Override
+  public String toString() {
+    return "[pattern=" + tregexPattern + "]";
+  }
+}
