@@ -88,3 +88,105 @@ public class DetectionTregexReader implements Closeable {
             null,
             new FileInputStream(PatternEnv.DIR
                 + PatternEnv.MEMEMBER_COLLECTION_TREGEX),
+            new FileInputStream(PatternEnv.DIR + PatternEnv.HYPERNYMY_TREGEX));
+    } catch (FileNotFoundException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+    isRead = true;
+  }
+
+  public static void read(InputStream paris,
+      InputStream coois,
+      InputStream relis,
+      InputStream appis,
+      InputStream senbegis,
+      InputStream otheris,
+      InputStream memis,
+      InputStream hypis) {
+    DetectionTregexReader reader;
+    try {
+      reader = new DetectionTregexReader(paris);
+      parlist.addAll(reader.readTregex());
+      reader.close();
+
+      reader = new DetectionTregexReader(coois);
+      coolist.addAll(reader.readTregex());
+      reader.close();
+
+      reader = new DetectionTregexReader(relis);
+      rellist.addAll(reader.readTregex());
+      reader.close();
+
+      reader = new DetectionTregexReader(appis);
+      applist.addAll(reader.readTregex());
+      reader.close();
+
+      reader = new DetectionTregexReader(memis);
+      memlist.addAll(reader.readTregex());
+      reader.close();
+
+      reader = new DetectionTregexReader(hypis);
+      hyplist.addAll(reader.readTregex());
+      reader.close();
+
+      //
+      // reader = new DetectionTregexReader(senbegis);
+      // senbeglist.addAll(reader.readTregex());
+      // reader.close();
+      //
+      // reader = new DetectionTregexReader(otheris);
+      // otherslist.addAll(reader.readTregex());
+      // reader.close();
+
+      isRead = true;
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
+
+  LineNumberReader reader;
+
+  public DetectionTregexReader(InputStream is) {
+    reader = new LineNumberReader(new InputStreamReader(is));
+  }
+
+  public List<DetectionPattern> readTregex()
+      throws IOException {
+    List<DetectionPattern> list = new LinkedList<DetectionPattern>();
+    String line = null;
+    while ((line = reader.readLine()) != null) {
+      line = line.trim();
+      if (line.startsWith("#") || line.startsWith("//")) {
+        continue;
+      } else if (line.isEmpty()) {
+        continue;
+      }
+      int index = line.indexOf(':');
+      if (index == -1) {
+        throw new IllegalArgumentException("cannot parse line["
+            + reader.getLineNumber()
+              + "]: "
+              + line);
+      }
+      String name = line.substring(0, index).trim();
+      String value = line.substring(index + 1).trim();
+      if (name.equals("tregex")) {
+        list.add(new DetectionPattern(TregexPattern.compile(value)));
+      } else {
+        throw new IllegalArgumentException("cannot parse line["
+            + reader.getLineNumber()
+              + "]: "
+              + line);
+      }
+
+    }
+    return list;
+  }
+
+  @Override
+  public void close()
+      throws IOException {
+    reader.close();
+  }
+}
