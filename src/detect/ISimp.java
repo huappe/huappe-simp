@@ -115,3 +115,19 @@ public class ISimp extends AnnotationPipeline {
     super.addAnnotator(new AdjpCoordinationExtractor());
     super.addAnnotator(new AdvpCoordinationExtractor());
     super.addAnnotator(new SenCoordinationExtractor());
+    super.addAnnotator(new MemberCollectionExtractor());
+    super.addAnnotator(new HypernymyExtractor());
+  }
+
+  @Override
+  public void annotate(Annotation annotation) {
+    super.annotate(annotation);
+    // add origin text
+    String originText = annotation.get(TextAnnotation.class);
+    List<CoreMap> sentences = annotation.get(SentencesAnnotation.class);
+    for (CoreMap sentence : sentences) {
+      sentence.set(OriginalTextAnnotation.class, originText);
+    }
+  }
+
+}
