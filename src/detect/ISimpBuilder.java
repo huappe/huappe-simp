@@ -21,4 +21,12 @@ public class ISimpBuilder {
     return this;
   }
 
-  public ISi
+  public ISimpBuilder onlyParser() {
+    onlyParser = true;
+    return this;
+  }
+
+  public ISimp create() {
+    return new ISimp(this);
+  }
+}
