@@ -9,4 +9,8 @@ import annotation.ISimpAnnotations.CoordinationAnnotation;
 import annotation.ISimpAnnotations.CoordinationConjunctAnnotation;
 import annotation.ISimpAnnotations.CoordinationConjunctionAnnotation;
 import annotation.ISimpAnnotations.NpCoordinationAnnotation;
-import annotation.ISimpAnnotations.PpCoordinationA
+import annotation.ISimpAnnotations.PpCoordinationAnnotation;
+import annotation.ISimpAnnotations.SenCoordinationAnnotation;
+import annotation.ISimpAnnotations.VpCoordinationAnnotation;
+import edu.stanford.nlp.ling.CoreLabel;
+import edu.stanford.nlp.t
