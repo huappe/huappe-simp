@@ -6,4 +6,7 @@ import utils.PtbUtils;
 import annotation.ISimpAnnotations.AdjpCoordinationAnnotation;
 import annotation.ISimpAnnotations.AdvpCoordinationAnnotation;
 import annotation.ISimpAnnotations.CoordinationAnnotation;
-import ann
+import annotation.ISimpAnnotations.CoordinationConjunctAnnotation;
+import annotation.ISimpAnnotations.CoordinationConjunctionAnnotation;
+import annotation.ISimpAnnotations.NpCoordinationAnnotation;
+import annotation.ISimpAnnotations.PpCoordinationA
