@@ -22,4 +22,11 @@ public class CoordinationExtractor extends ISimpExtractor {
     super(CoordinationAnnotation.class);
   }
 
-  protected Coordina
+  protected CoordinationExtractor(Class<? extends Key<Integer>> annotationKey) {
+    super(annotationKey);
+  }
+
+  public static class NpCoordinationExtractor extends CoordinationExtractor {
+
+    public NpCoordinationExtractor() {
+      super(NpCoor
