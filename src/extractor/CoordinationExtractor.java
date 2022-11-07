@@ -29,4 +29,15 @@ public class CoordinationExtractor extends ISimpExtractor {
   public static class NpCoordinationExtractor extends CoordinationExtractor {
 
     public NpCoordinationExtractor() {
-      super(NpCoor
+      super(NpCoordinationAnnotation.class);
+    }
+  }
+
+  public static class VpCoordinationExtractor extends CoordinationExtractor {
+
+    public VpCoordinationExtractor() {
+      super(VpCoordinationAnnotation.class);
+    }
+  }
+
+  public sta
