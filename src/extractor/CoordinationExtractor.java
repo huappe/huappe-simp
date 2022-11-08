@@ -40,4 +40,11 @@ public class CoordinationExtractor extends ISimpExtractor {
     }
   }
 
-  public sta
+  public static class PpCoordinationExtractor extends CoordinationExtractor {
+
+    public PpCoordinationExtractor() {
+      super(PpCoordinationAnnotation.class);
+    }
+  }
+
+  public static class AdjpCoordinationExtractor extends C
