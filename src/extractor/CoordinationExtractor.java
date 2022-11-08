@@ -47,4 +47,13 @@ public class CoordinationExtractor extends ISimpExtractor {
     }
   }
 
-  public static class AdjpCoordinationExtractor extends C
+  public static class AdjpCoordinationExtractor extends CoordinationExtractor {
+
+    public AdjpCoordinationExtractor() {
+      super(AdjpCoordinationAnnotation.class);
+    }
+  }
+
+  public static class AdvpCoordinationExtractor extends CoordinationExtractor {
+
+    public AdvpCoordinationExtractor() {
