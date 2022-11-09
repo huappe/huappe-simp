@@ -65,3 +65,12 @@ public class CoordinationExtractor extends ISimpExtractor {
 
     public SenCoordinationExtractor() {
       super(SenCoordinationAnnotation.class);
+    }
+  }
+
+  @Override
+  protected SimplificationConstruct annotate(Tree tree, int index) {
+
+    SimplificationConstruct construct;
+    if (annotationKey == NpCoordinationAnnotation.class) {
+      constru
