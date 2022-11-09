@@ -57,3 +57,11 @@ public class CoordinationExtractor extends ISimpExtractor {
   public static class AdvpCoordinationExtractor extends CoordinationExtractor {
 
     public AdvpCoordinationExtractor() {
+      super(AdvpCoordinationAnnotation.class);
+    }
+  }
+
+  public static class SenCoordinationExtractor extends CoordinationExtractor {
+
+    public SenCoordinationExtractor() {
+      super(SenCoordinationAnnotation.class);
