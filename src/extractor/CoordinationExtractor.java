@@ -76,4 +76,7 @@ public class CoordinationExtractor extends ISimpExtractor {
       construct = new SimplificationConstruct(new NpCoordinationAnnotation());
     } else if (annotationKey == VpCoordinationAnnotation.class) {
       construct = new SimplificationConstruct(new VpCoordinationAnnotation());
-    } el
+    } else if (annotationKey == PpCoordinationAnnotation.class) {
+      construct = new SimplificationConstruct(new PpCoordinationAnnotation());
+    } else if (annotationKey == AdjpCoordinationAnnotation.class) {
+      construc
