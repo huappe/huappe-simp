@@ -93,4 +93,9 @@ public class CoordinationExtractor extends ISimpExtractor {
       CoreLabel label = (CoreLabel) child.label();
       // conjunct
       Integer subindex = label.get(CoordinationConjunctAnnotation.class);
-      if (subindex != null && subin
+      if (subindex != null && subindex == index) {
+        Range<Integer> range = PtbUtils.getRange(child);
+        construct.addComponent(new CoordinationConjunctAnnotation(), range);
+      }
+      // conjunction
+      subindex = label.get(CoordinationConjunctionAnnotati
