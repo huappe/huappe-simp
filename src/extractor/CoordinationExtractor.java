@@ -88,4 +88,9 @@ public class CoordinationExtractor extends ISimpExtractor {
       construct = new SimplificationConstruct(new CoordinationAnnotation());
     }
 
-    for (
+    for (Tree child : tree) {
+
+      CoreLabel label = (CoreLabel) child.label();
+      // conjunct
+      Integer subindex = label.get(CoordinationConjunctAnnotation.class);
+      if (subindex != null && subin
