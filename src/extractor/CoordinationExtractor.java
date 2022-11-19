@@ -82,4 +82,10 @@ public class CoordinationExtractor extends ISimpExtractor {
       construct = new SimplificationConstruct(new AdjpCoordinationAnnotation());
     } else if (annotationKey == AdvpCoordinationAnnotation.class) {
       construct = new SimplificationConstruct(new AdvpCoordinationAnnotation());
-    } else if (a
+    } else if (annotationKey == SenCoordinationAnnotation.class) {
+      construct = new SimplificationConstruct(new SenCoordinationAnnotation());
+    } else {
+      construct = new SimplificationConstruct(new CoordinationAnnotation());
+    }
+
+    for (
