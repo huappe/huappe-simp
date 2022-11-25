@@ -98,4 +98,13 @@ public class CoordinationExtractor extends ISimpExtractor {
         construct.addComponent(new CoordinationConjunctAnnotation(), range);
       }
       // conjunction
-      subindex = label.get(CoordinationConjunctionAnnotati
+      subindex = label.get(CoordinationConjunctionAnnotation.class);
+      if (subindex != null && subindex == index) {
+        Range<Integer> range = PtbUtils.getRange(child);
+        construct.addComponent(new CoordinationConjunctionAnnotation(), range);
+      }
+    }
+    return construct;
+  }
+
+}
