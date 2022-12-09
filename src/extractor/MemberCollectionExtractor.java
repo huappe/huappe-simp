@@ -7,4 +7,13 @@ import annotation.ISimpAnnotations.MemberCollectionAnnotation;
 import annotation.ISimpAnnotations.MemberCollectionCollectionAnnotation;
 import annotation.ISimpAnnotations.MemberCollectionMemberAnnotation;
 import edu.stanford.nlp.ling.CoreLabel;
-import edu
+import edu.stanford.nlp.trees.Tree;
+
+public class MemberCollectionExtractor extends ISimpExtractor {
+
+  public MemberCollectionExtractor() {
+    super(MemberCollectionAnnotation.class);
+  }
+
+  @Override
+  protected SimplificationConstru
