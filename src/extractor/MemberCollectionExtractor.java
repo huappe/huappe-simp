@@ -16,4 +16,11 @@ public class MemberCollectionExtractor extends ISimpExtractor {
   }
 
   @Override
-  protected SimplificationConstru
+  protected SimplificationConstruct annotate(Tree tree, int index) {
+
+    Range<Integer> memRange = null;
+    Range<Integer> clRange = null;
+    SimplificationConstruct construct = new SimplificationConstruct(
+        new MemberCollectionAnnotation());
+
+    for (Tree child : tree) {
