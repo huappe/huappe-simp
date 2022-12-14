@@ -24,3 +24,8 @@ public class MemberCollectionExtractor extends ISimpExtractor {
         new MemberCollectionAnnotation());
 
     for (Tree child : tree) {
+      CoreLabel label = (CoreLabel) child.label();
+      // member
+      Integer subindex = label.get(MemberCollectionMemberAnnotation.class);
+      if (subindex != null && subindex == index) {
+        memRange = PtbUtils.getR
