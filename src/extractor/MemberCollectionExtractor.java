@@ -40,4 +40,11 @@ public class MemberCollectionExtractor extends ISimpExtractor {
       }
     }
     if (memRange == null) {
-      throw new RuntimeExcep
+      throw new RuntimeException(String.format(
+          "can not find MEMBER: %s",
+            tree.toString()));
+    }
+    if (clRange == null) {
+      throw new RuntimeException(String.format(
+          "can not find COLLECTION: %s",
+            
