@@ -34,4 +34,10 @@ public class MemberCollectionExtractor extends ISimpExtractor {
       }
       // collection
       subindex = label.get(MemberCollectionCollectionAnnotation.class);
-      if (subindex != null
+      if (subindex != null && subindex == index) {
+        clRange = PtbUtils.getRange(child);
+        construct.addComponent(new MemberCollectionCollectionAnnotation(), clRange);
+      }
+    }
+    if (memRange == null) {
+      throw new RuntimeExcep
