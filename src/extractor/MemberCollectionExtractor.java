@@ -47,4 +47,9 @@ public class MemberCollectionExtractor extends ISimpExtractor {
     if (clRange == null) {
       throw new RuntimeException(String.format(
           "can not find COLLECTION: %s",
-            
+            tree.toString()));
+    }
+    return construct;
+  }
+
+}
