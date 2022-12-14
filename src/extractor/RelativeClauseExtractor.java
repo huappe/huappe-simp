@@ -22,4 +22,13 @@ public class RelativeClauseExtractor extends ISimpExtractor {
     super(annotationKey);
   }
 
-  public static clas
+  public static class FullRelativeClauseExtractor extends
+      RelativeClauseExtractor {
+
+    public FullRelativeClauseExtractor() {
+      super(FullRelativeClauseAnnotation.class);
+    }
+  }
+
+  public static class RedRelativeClauseExtractor extends
+      Relati
