@@ -28,4 +28,10 @@ public class MemberCollectionExtractor extends ISimpExtractor {
       // member
       Integer subindex = label.get(MemberCollectionMemberAnnotation.class);
       if (subindex != null && subindex == index) {
-        memRange = PtbUtils.getR
+        memRange = PtbUtils.getRange(child);
+        construct
+            .addComponent(new MemberCollectionMemberAnnotation(), memRange);
+      }
+      // collection
+      subindex = label.get(MemberCollectionCollectionAnnotation.class);
+      if (subindex != null
