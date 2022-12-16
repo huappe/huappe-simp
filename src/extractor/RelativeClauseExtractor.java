@@ -31,4 +31,15 @@ public class RelativeClauseExtractor extends ISimpExtractor {
   }
 
   public static class RedRelativeClauseExtractor extends
-      Relati
+      RelativeClauseExtractor {
+
+    public RedRelativeClauseExtractor() {
+      super(RedRelativeClauseAnnotation.class);
+    }
+  }
+
+  @Override
+  protected SimplificationConstruct annotate(Tree tree, int index) {
+
+    Range<Integer> npRange = null;
+    Range<Int
