@@ -42,4 +42,9 @@ public class RelativeClauseExtractor extends ISimpExtractor {
   protected SimplificationConstruct annotate(Tree tree, int index) {
 
     Range<Integer> npRange = null;
-    Range<Int
+    Range<Integer> clRange = null;
+    SimplificationConstruct construct;
+    if (annotationKey == FullRelativeClauseAnnotation.class) {
+      construct = new SimplificationConstruct(
+          new FullRelativeClauseAnnotation());
+    } else
