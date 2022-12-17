@@ -47,4 +47,7 @@ public class RelativeClauseExtractor extends ISimpExtractor {
     if (annotationKey == FullRelativeClauseAnnotation.class) {
       construct = new SimplificationConstruct(
           new FullRelativeClauseAnnotation());
-    } else
+    } else if (annotationKey == RedRelativeClauseAnnotation.class) {
+      construct = new SimplificationConstruct(new RedRelativeClauseAnnotation());
+    } else {
+      construct = new SimplificationConstruct(new RelativeClauseA
