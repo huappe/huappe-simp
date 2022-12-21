@@ -62,4 +62,12 @@ public class RelativeClauseExtractor extends ISimpExtractor {
         construct.addComponent(new RelativeClauseRefAnnotation(), npRange);
       }
       // clause
-      subindex = label.get(RelativeClauseClauseAnno
+      subindex = label.get(RelativeClauseClauseAnnotation.class);
+      if (subindex != null && subindex == index) {
+        clRange = PtbUtils.getRange(child);
+        construct.addComponent(new RelativeClauseClauseAnnotation(), clRange);
+        break;
+      }
+    }
+    if (npRange == null) {
+  
