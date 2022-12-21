@@ -50,4 +50,11 @@ public class RelativeClauseExtractor extends ISimpExtractor {
     } else if (annotationKey == RedRelativeClauseAnnotation.class) {
       construct = new SimplificationConstruct(new RedRelativeClauseAnnotation());
     } else {
-      construct = new SimplificationConstruct(new RelativeClauseA
+      construct = new SimplificationConstruct(new RelativeClauseAnnotation());
+    }
+
+    for (Tree child : tree) {
+      CoreLabel label = (CoreLabel) child.label();
+      // ref
+      Integer subindex = label.get(RelativeClauseRefAnnotation.class);
+      if (subinde
