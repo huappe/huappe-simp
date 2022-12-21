@@ -57,4 +57,9 @@ public class RelativeClauseExtractor extends ISimpExtractor {
       CoreLabel label = (CoreLabel) child.label();
       // ref
       Integer subindex = label.get(RelativeClauseRefAnnotation.class);
-      if (subinde
+      if (subindex != null && subindex == index) {
+        npRange = PtbUtils.getRange(child);
+        construct.addComponent(new RelativeClauseRefAnnotation(), npRange);
+      }
+      // clause
+      subindex = label.get(RelativeClauseClauseAnno
