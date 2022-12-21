@@ -76,4 +76,10 @@ public class RelativeClauseExtractor extends ISimpExtractor {
     }
     if (clRange == null) {
       throw new RuntimeException(String.format(
-          "can not find CLAU
+          "can not find CLAUSE: %s",
+          tree.toString()));
+    }
+    return construct;
+  }
+
+}
