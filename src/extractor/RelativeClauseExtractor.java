@@ -70,4 +70,10 @@ public class RelativeClauseExtractor extends ISimpExtractor {
       }
     }
     if (npRange == null) {
-  
+      throw new RuntimeException(String.format(
+          "can not find RELREF: %s",
+          tree.toString()));
+    }
+    if (clRange == null) {
+      throw new RuntimeException(String.format(
+          "can not find CLAU
