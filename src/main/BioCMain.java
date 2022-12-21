@@ -9,4 +9,12 @@ import java.util.List;
 
 import javax.xml.stream.XMLStreamException;
 
-import annotat
+import annotation.ISimpAnnotations.ISimpAnnotation;
+import bioc.BioCAnnotation;
+import bioc.BioCCollection;
+import bioc.BioCDocument;
+import bioc.BioCLocation;
+import bioc.BioCNode;
+import bioc.BioCPassage;
+import bioc.BioCRelation;
+import bioc.
