@@ -17,4 +17,10 @@ import bioc.BioCLocation;
 import bioc.BioCNode;
 import bioc.BioCPassage;
 import bioc.BioCRelation;
-import bioc.
+import bioc.BioCSentence;
+import bioc.io.BioCCollectionReader;
+import bioc.io.BioCCollectionWriter;
+import bioc.io.BioCFactory;
+import detect.ISimpBuilder;
+import edu.stanford.nlp.ling.CoreAnnotations.CharacterOffsetBeginAnnotation;
+import edu.stanford.n
