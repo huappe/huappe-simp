@@ -27,4 +27,15 @@ import edu.stanford.nlp.ling.CoreAnnotations.SentencesAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations.TextAnnotation;
 import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.Annotator;
-import edu.stanford.nlp.util.Co
+import edu.stanford.nlp.util.CoreMap;
+import extractor.SimplificationConstruct;
+import extractor.SimplificationConstruct.Component;
+
+public class BioCMain {
+
+  /**
+   * @param args
+   * @throws XMLStreamException
+   * @throws IOException
+   */
+  public static void ma
