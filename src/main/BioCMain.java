@@ -38,4 +38,11 @@ public class BioCMain {
    * @throws XMLStreamException
    * @throws IOException
    */
-  public static void ma
+  public static void main(String[] args)
+      throws XMLStreamException, IOException {
+
+    // args = new String[] { "testcases/PMID-8632999.xml" };
+
+    if (args.length == 0) {
+      System.err.println("Usage: BioCMain inputfiles");
+  
