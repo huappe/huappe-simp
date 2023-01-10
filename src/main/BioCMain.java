@@ -61,4 +61,9 @@ public class BioCMain {
       BioCCollection collection = null;
       try {
         BioCCollectionReader reader = BioCFactory.newFactory(
-            BioCFac
+            BioCFactory.STANDARD).createBioCCollectionReader(
+            new FileReader(inputfile));
+        collection = reader.readCollection();
+        reader.close();
+      } catch (FileNotFoundException e) {
+        System.err.println("No suc
