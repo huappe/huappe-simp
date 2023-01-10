@@ -45,4 +45,14 @@ public class BioCMain {
 
     if (args.length == 0) {
       System.err.println("Usage: BioCMain inputfiles");
+      return;
+    }
+
+    // init
+    Annotator isimp = new ISimpBuilder().onlyParser().create();
+
+    for (String arg : args) {
+
+      System.err.print("processing " + arg + "...");
+      File inputfile = new File(arg);
   
