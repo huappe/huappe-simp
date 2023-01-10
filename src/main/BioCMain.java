@@ -55,4 +55,10 @@ public class BioCMain {
 
       System.err.print("processing " + arg + "...");
       File inputfile = new File(arg);
-  
+      String filename = arg.substring(0, arg.lastIndexOf('.'));
+      File outputfile = new File(filename + ".simp.xml");
+
+      BioCCollection collection = null;
+      try {
+        BioCCollectionReader reader = BioCFactory.newFactory(
+            BioCFac
