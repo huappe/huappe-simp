@@ -66,4 +66,11 @@ public class BioCMain {
         collection = reader.readCollection();
         reader.close();
       } catch (FileNotFoundException e) {
-        System.err.println("No suc
+        System.err.println("No such file or directory");
+        continue;
+      }
+
+      for (BioCDocument doc : collection.getDocuments()) {
+        doc.clearRelations();
+        for (BioCPassage pas : doc.getPassages()) {
+          pas.clearAnnotat
