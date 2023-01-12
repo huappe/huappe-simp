@@ -90,3 +90,8 @@ public class BioCMain {
                   sentence.get(ISimpAnnotation.class));
             }
           } else {
+            for (BioCSentence sen : pas.getSentences()) {
+              sen.clearAnnotations();
+              sen.clearRelations();
+              // annotate
+              Annotation document = new Annotation(sen.getText())
