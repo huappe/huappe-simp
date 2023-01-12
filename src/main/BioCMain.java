@@ -82,4 +82,11 @@ public class BioCMain {
             List<CoreMap> sentences = document.get(SentencesAnnotation.class);
             for (CoreMap sentence : sentences) {
               BioCSentence sen = new BioCSentence();
-              sen.setOffset(sentence.get(CharacterOffsetBeginAnn
+              sen.setOffset(sentence.get(CharacterOffsetBeginAnnotation.class));
+              sen.setText(sentence.get(TextAnnotation.class));
+              pas.addSentence(sen);
+              getSimplificationConstruct(
+                  sen,
+                  sentence.get(ISimpAnnotation.class));
+            }
+          } else {
