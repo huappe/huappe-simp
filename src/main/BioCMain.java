@@ -79,4 +79,7 @@ public class BioCMain {
             // annotate
             Annotation document = new Annotation(pas.getText());
             isimp.annotate(document);
-            Li
+            List<CoreMap> sentences = document.get(SentencesAnnotation.class);
+            for (CoreMap sentence : sentences) {
+              BioCSentence sen = new BioCSentence();
+              sen.setOffset(sentence.get(CharacterOffsetBeginAnn
