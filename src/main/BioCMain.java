@@ -73,4 +73,10 @@ public class BioCMain {
       for (BioCDocument doc : collection.getDocuments()) {
         doc.clearRelations();
         for (BioCPassage pas : doc.getPassages()) {
-          pas.clearAnnotat
+          pas.clearAnnotations();
+          pas.clearRelations();
+          if (pas.getSentences().isEmpty()) {
+            // annotate
+            Annotation document = new Annotation(pas.getText());
+            isimp.annotate(document);
+            Li
