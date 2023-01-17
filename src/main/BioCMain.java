@@ -94,4 +94,9 @@ public class BioCMain {
               sen.clearAnnotations();
               sen.clearRelations();
               // annotate
-              Annotation document = new Annotation(sen.getText())
+              Annotation document = new Annotation(sen.getText());
+              isimp.annotate(document);
+              List<CoreMap> sentences = document.get(SentencesAnnotation.class);
+              getSimplificationConstruct(
+                  sen,
+                  sentences.get(0).get(ISimpAnno
