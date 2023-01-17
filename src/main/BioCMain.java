@@ -99,4 +99,12 @@ public class BioCMain {
               List<CoreMap> sentences = document.get(SentencesAnnotation.class);
               getSimplificationConstruct(
                   sen,
-                  sentences.get(0).get(ISimpAnno
+                  sentences.get(0).get(ISimpAnnotation.class));
+            }
+          }
+        }
+      }
+      // print
+      BioCCollectionWriter writer = BioCFactory
+          .newFactory(BioCFactory.STANDARD).createBioCCollectionWriter(
+              new FileWriter(outputf
