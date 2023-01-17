@@ -107,4 +107,12 @@ public class BioCMain {
       // print
       BioCCollectionWriter writer = BioCFactory
           .newFactory(BioCFactory.STANDARD).createBioCCollectionWriter(
-              new FileWriter(outputf
+              new FileWriter(outputfile));
+      writer.writeCollection(collection);
+      writer.close();
+      System.err.println("Done");
+    }
+  }
+
+  private static void getSimplificationConstruct(BioCSentence orginalSen,
+      List<SimplificationConstruct> lis
