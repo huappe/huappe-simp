@@ -115,4 +115,9 @@ public class BioCMain {
   }
 
   private static void getSimplificationConstruct(BioCSentence orginalSen,
-      List<SimplificationConstruct> lis
+      List<SimplificationConstruct> listlist) {
+    // simp construct
+    int reli = orginalSen.getRelations().size();
+    for (SimplificationConstruct p : listlist) {
+      BioCRelation relation = new BioCRelation();
+      orginalSen.
