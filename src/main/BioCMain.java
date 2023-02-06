@@ -126,4 +126,8 @@ public class BioCMain {
 
       int anni = orginalSen.getAnnotations().size();
       for (Component t : p.components()) {
-        Bi
+        BioCAnnotation ann = new BioCAnnotation();
+        String refid = "t" + anni++;
+        ann.setID(refid);
+        ann.putInfon("type", "simplification construct");
+        ann.addLocation(new BioCLocation(orginalSen.getOffset() + t.be
