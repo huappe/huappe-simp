@@ -120,4 +120,10 @@ public class BioCMain {
     int reli = orginalSen.getRelations().size();
     for (SimplificationConstruct p : listlist) {
       BioCRelation relation = new BioCRelation();
-      orginalSen.
+      orginalSen.addRelation(relation);
+      relation.setID("r" + reli++);
+      relation.putInfon("simp", p.annotation().name());
+
+      int anni = orginalSen.getAnnotations().size();
+      for (Component t : p.components()) {
+        Bi
