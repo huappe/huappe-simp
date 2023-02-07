@@ -136,4 +136,13 @@ public class BioCMain {
           ann.setText(orginalSen.getText().substring(t.beginPosition(), t.endPosition()));
         } catch (StringIndexOutOfBoundsException e) {
           System.err.println(orginalSen);
-          Sys
+          System.err.println(t);
+          System.exit(1);
+        }
+        orginalSen.addAnnotation(ann);
+        // rel
+        relation.addNode(new BioCNode(refid, t.annotation().name()));
+      }
+    }
+  }
+}
