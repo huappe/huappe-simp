@@ -130,4 +130,10 @@ public class BioCMain {
         String refid = "t" + anni++;
         ann.setID(refid);
         ann.putInfon("type", "simplification construct");
-        ann.addLocation(new BioCLocation(orginalSen.getOffset() + t.be
+        ann.addLocation(new BioCLocation(orginalSen.getOffset() + t.beginPosition(),
+            t.length()));
+        try {
+          ann.setText(orginalSen.getText().substring(t.beginPosition(), t.endPosition()));
+        } catch (StringIndexOutOfBoundsException e) {
+          System.err.println(orginalSen);
+          Sys
