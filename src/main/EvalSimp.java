@@ -139,3 +139,79 @@ public class EvalSimp {
     System.out.println("relative TP: " + numGoldRelTP);
     System.out.println("relative FN: " + numGoldRelFN);
     System.out.println("relative FP: " + numGoldRelFP);
+
+    reltpOutput.close();
+    relfnOutput.close();
+    relfpOutput.close();
+  }
+
+  private static void print(PrintStream out, BioCRelation rel, BioCSentence sen) {
+    out.println(sen.getText());
+
+    BioCLocation loc = getLoc("referred noun phrase", rel, sen);
+    String ref = sen.getText().substring(
+        loc.getOffset() - sen.getOffset(),
+          loc.getOffset() + loc.getLength() - sen.getOffset());
+
+    loc = getLoc("relative clause", rel, sen);
+    String clause = sen.getText().substring(
+        loc.getOffset() - sen.getOffset(),
+          loc.getOffset() + loc.getLength() - sen.getOffset());
+
+    out.println("REL: " + ref + " ~@~ " + clause);
+    out.println();
+  }
+  
+  private static void print(PrintStream out, BioCRelation rel1, BioCSentence sen1, BioCRelation rel2, BioCSentence sen2) {
+    out.println(sen1.getText());
+
+    BioCLocation loc = getLoc("referred noun phrase", rel1, sen1);
+    String ref = sen1.getText().substring(
+        loc.getOffset() - sen1.getOffset(),
+          loc.getOffset() + loc.getLength() - sen1.getOffset());
+
+    loc = getLoc("relative clause", rel1, sen1);
+    String clause = sen1.getText().substring(
+        loc.getOffset() - sen1.getOffset(),
+          loc.getOffset() + loc.getLength() - sen1.getOffset());
+
+    out.println("REL: " + ref + " ~@~ " + clause);
+    
+    loc = getLoc("referred noun phrase", rel2, sen2);
+    ref = sen2.getText().substring(
+        loc.getOffset() - sen2.getOffset(),
+          loc.getOffset() + loc.getLength() - sen2.getOffset());
+
+    loc = getLoc("relative clause", rel2, sen2);
+    clause = sen2.getText().substring(
+        loc.getOffset() - sen2.getOffset(),
+          loc.getOffset() + loc.getLength() - sen2.getOffset());
+    
+    out.println("REL: " + ref + " ~@~ " + clause);
+    
+    out.println();
+  }
+
+  private static BioCLocation getLoc(String nodeRole,
+      BioCRelation rel,
+      BioCSentence sen) {
+    BioCNode node = null;
+    for (BioCNode n : rel.getNodes()) {
+      if (n.getRole().equals(nodeRole)) {
+        node = n;
+        break;
+      }
+    }
+    assert node != null;
+    BioCAnnotation ann = null;
+    for (BioCAnnotation a : sen.getAnnotations()) {
+      if (a.getID().equals(node.getRefid())) {
+        ann = a;
+        break;
+      }
+    }
+    assert ann != null;
+    return ann.getLocations().get(0);
+  }
+
+}
