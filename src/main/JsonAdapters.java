@@ -9,4 +9,14 @@ import extractor.SimplificationConstruct;
 import extractor.SimplificationConstruct.Component;
 
 import java.util.ArrayList;
-import java.util.
+import java.util.List;
+
+public abstract class JsonAdapters {
+
+  public static class SentenceAdapter {
+
+    @SerializedName("TYPE")
+    final String type;
+    @SerializedName("TEXT")
+    final String text;
+    @SerializedName
