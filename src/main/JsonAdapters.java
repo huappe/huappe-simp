@@ -28,4 +28,10 @@ public abstract class JsonAdapters {
     @SerializedName("TREE")
     final String tree;
     @SerializedName("SIMP")
-    final List<ConstructAdapter> co
+    final List<ConstructAdapter> constructs;
+
+    SentenceAdapter(CoreMap sentence) {
+      type = "sentence";
+      text = sentence.get(TextAnnotation.class);
+      begin = sentence.get(CharacterOffsetBeginAnnotation.class);
+      end = sentence.get(Character
