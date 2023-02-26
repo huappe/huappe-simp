@@ -34,4 +34,9 @@ public abstract class JsonAdapters {
       type = "sentence";
       text = sentence.get(TextAnnotation.class);
       begin = sentence.get(CharacterOffsetBeginAnnotation.class);
-      end = sentence.get(Character
+      end = sentence.get(CharacterOffsetEndAnnotation.class);
+      StringBuilder sb = new StringBuilder();
+      for (CoreMap tok : sentence.get(TokensAnnotation.class)) {
+        sb.append(tok.get(TextAnnotation.class))
+                .append('_')
+              
