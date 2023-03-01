@@ -39,4 +39,9 @@ public abstract class JsonAdapters {
       for (CoreMap tok : sentence.get(TokensAnnotation.class)) {
         sb.append(tok.get(TextAnnotation.class))
                 .append('_')
-              
+                .append(tok.get(PartOfSpeechAnnotation.class))
+                .append(' ');
+      }
+      pos = sb.toString();
+      tree = sentence.get(TreeAnnotation.class).toString();
+      constructs 
