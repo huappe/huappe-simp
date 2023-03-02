@@ -60,4 +60,11 @@ public abstract class JsonAdapters {
     @SerializedName("TEXT")
     final String text;
     @SerializedName("FROM")
-    
+    final int begin;
+    @SerializedName("TO")
+    final int end;
+    @SerializedName("COMP")
+    final List<ComponentAdapter> components;
+
+    ConstructAdapter(SimplificationConstruct construct, String originalText) {
+      type
