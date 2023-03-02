@@ -47,4 +47,17 @@ public abstract class JsonAdapters {
       constructs = new ArrayList<>();
       if (sentence.get(ISimpAnnotation.class) != null) {
         for (SimplificationConstruct construct : sentence.get(ISimpAnnotation.class)) {
-          constructs.add(new ConstructAdapter(construct, sentence.get(OriginalTex
+          constructs.add(new ConstructAdapter(construct, sentence.get(OriginalTextAnnotation.class)));
+        }
+      }
+    }
+  }
+
+  public static class ConstructAdapter {
+
+    @SerializedName("TYPE")
+    final String type;
+    @SerializedName("TEXT")
+    final String text;
+    @SerializedName("FROM")
+    
