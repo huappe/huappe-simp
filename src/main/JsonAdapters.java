@@ -44,4 +44,7 @@ public abstract class JsonAdapters {
       }
       pos = sb.toString();
       tree = sentence.get(TreeAnnotation.class).toString();
-      constructs 
+      constructs = new ArrayList<>();
+      if (sentence.get(ISimpAnnotation.class) != null) {
+        for (SimplificationConstruct construct : sentence.get(ISimpAnnotation.class)) {
+          constructs.add(new ConstructAdapter(construct, sentence.get(OriginalTex
