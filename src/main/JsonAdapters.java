@@ -90,4 +90,9 @@ public abstract class JsonAdapters {
     final int end;
 
     public ComponentAdapter(Component comp) {
-   
+      type = comp.annotation().name();
+      begin = comp.beginPosition();
+      end = comp.endPosition();
+    }
+  }
+}
