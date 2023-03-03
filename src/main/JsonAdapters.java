@@ -72,4 +72,12 @@ public abstract class JsonAdapters {
               construct.beginPosition(),
               construct.endPosition());
       begin = construct.beginPosition();
-      end = construct.endPos
+      end = construct.endPosition();
+      components = new ArrayList<>();
+      for (Component comp : construct.components()) {
+        components.add(new ComponentAdapter(comp));
+      }
+    }
+  }
+
+  public static class Compon
