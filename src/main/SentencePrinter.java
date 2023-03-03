@@ -36,4 +36,18 @@ public abstract class SentencePrinter {
         }
         gson = builder.create();
       }
-      return gson.toJson(new SentenceAdapt
+      return gson.toJson(new SentenceAdapter(sentence));
+    }
+
+  }
+
+  protected static class PlainPrinter extends SentencePrinter {
+
+    PlainPrinter(boolean isPrettyPrinting) {
+      super(isPrettyPrinting);
+    }
+
+    private static Plain plain = null;
+
+    @Override
+  
