@@ -67,4 +67,9 @@ public abstract class JsonAdapters {
     final List<ComponentAdapter> components;
 
     ConstructAdapter(SimplificationConstruct construct, String originalText) {
-      type
+      type = construct.annotation().name();
+      text = originalText.substring(
+              construct.beginPosition(),
+              construct.endPosition());
+      begin = construct.beginPosition();
+      end = construct.endPos
