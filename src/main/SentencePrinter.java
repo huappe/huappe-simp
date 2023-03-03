@@ -10,4 +10,13 @@ import main.JsonAdapters.SentenceAdapter;
 
 public abstract class SentencePrinter {
 
-  
+  boolean isPrettyPrinting;
+
+  private SentencePrinter(boolean isPrettyPrinting) {
+    this.isPrettyPrinting = isPrettyPrinting;
+  }
+
+  public abstract String get(CoreMap sentence);
+
+
+  protected static class JsonPrin
