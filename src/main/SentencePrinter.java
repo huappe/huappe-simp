@@ -19,4 +19,14 @@ public abstract class SentencePrinter {
   public abstract String get(CoreMap sentence);
 
 
-  protected static class JsonPrin
+  protected static class JsonPrinter extends SentencePrinter {
+
+    JsonPrinter(boolean isPrettyPrinting) {
+      super(isPrettyPrinting);
+    }
+
+    private static Gson gson = null;
+
+    @Override
+    public String get(CoreMap sentence) {
+      if (g
