@@ -29,4 +29,11 @@ public abstract class SentencePrinter {
 
     @Override
     public String get(CoreMap sentence) {
-      if (g
+      if (gson == null) {
+        GsonBuilder builder = new GsonBuilder();
+        if (isPrettyPrinting) {
+          builder.setPrettyPrinting();
+        }
+        gson = builder.create();
+      }
+      return gson.toJson(new SentenceAdapt
