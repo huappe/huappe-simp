@@ -80,4 +80,14 @@ public abstract class JsonAdapters {
     }
   }
 
-  public static class Compon
+  public static class ComponentAdapter {
+
+    @SerializedName("TYPE")
+    final String type;
+    @SerializedName("FROM")
+    final int begin;
+    @SerializedName("TO")
+    final int end;
+
+    public ComponentAdapter(Component comp) {
+   
