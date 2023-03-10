@@ -50,4 +50,9 @@ public abstract class SentencePrinter {
     private static Plain plain = null;
 
     @Override
-  
+    public String get(CoreMap sentence) {
+      if (plain == null) {
+        PlainBuilder builder = new PlainBuilder();
+        if (isPrettyPrinting) {
+          builder = builder.setPrettyPrinting();
+      
