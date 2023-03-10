@@ -55,4 +55,15 @@ public abstract class SentencePrinter {
         PlainBuilder builder = new PlainBuilder();
         if (isPrettyPrinting) {
           builder = builder.setPrettyPrinting();
-      
+        }
+        plain = builder.create();
+      }
+      return plain.toPlain(new SentenceAdapter(sentence));
+    }
+
+    private class PlainBuilder {
+
+      private boolean isPrettyPrinting;
+
+      PlainBuilder() {
+        isPrett
