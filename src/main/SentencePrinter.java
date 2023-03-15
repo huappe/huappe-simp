@@ -66,4 +66,17 @@ public abstract class SentencePrinter {
       private boolean isPrettyPrinting;
 
       PlainBuilder() {
-        isPrett
+        isPrettyPrinting = false;
+      }
+
+      PlainBuilder setPrettyPrinting() {
+        isPrettyPrinting = true;
+        return this;
+      }
+
+      Plain create() {
+        return new Plain(this);
+      }
+    }
+
+    c
