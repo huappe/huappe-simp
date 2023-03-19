@@ -79,4 +79,13 @@ public abstract class SentencePrinter {
       }
     }
 
-    c
+    class Plain {
+
+      private final PlainBuilder builder;
+      private final int width = 80;
+
+      Plain(PlainBuilder builder) {
+        this.builder = builder;
+      }
+
+      String toPlain(SentenceAdapter ada
