@@ -88,4 +88,12 @@ public abstract class SentencePrinter {
         this.builder = builder;
       }
 
-      String toPlain(SentenceAdapter ada
+      String toPlain(SentenceAdapter adapter) {
+        StringBuilder sb = new StringBuilder();
+        String line;
+
+        sb.append("TYPE: ").append(adapter.type);
+        // loc
+        sb.append(loc(adapter.begin, adapter.end)).append('\n');
+        // text
+        l
