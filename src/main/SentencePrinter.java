@@ -96,4 +96,11 @@ public abstract class SentencePrinter {
         // loc
         sb.append(loc(adapter.begin, adapter.end)).append('\n');
         // text
-        l
+        line = "TEXT: " + adapter.text;
+        if (builder.isPrettyPrinting) {
+          line = autoformat(line, 6);
+        }
+        sb.append(line).append('\n');
+        // pos
+        line = "POS : " + adapter.pos;
+        if (builder
