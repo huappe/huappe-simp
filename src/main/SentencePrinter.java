@@ -117,4 +117,10 @@ public abstract class SentencePrinter {
         for (ConstructAdapter construct : adapter.constructs) {
           sb.append("SIMP:\n");
           // construct
-          sb.append(indent(2)).append
+          sb.append(indent(2)).append("TYPE: ").append(construct.type);
+          // loc
+          sb.append(loc(construct.begin, construct.end)).append('\n');
+          // text
+          line = indent(2) + "TEXT: " + construct.text;
+          if (builder.isPrettyPrinting) {
+       
