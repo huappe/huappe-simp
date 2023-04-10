@@ -103,4 +103,11 @@ public abstract class SentencePrinter {
         sb.append(line).append('\n');
         // pos
         line = "POS : " + adapter.pos;
-        if (builder
+        if (builder.isPrettyPrinting) {
+          line = autoformat(line, 6);
+        }
+        sb.append(line).append('\n');
+        // tree
+        line = "TREE: " + adapter.tree;
+        if (builder.isPrettyPrinting) {
+          line = auto
