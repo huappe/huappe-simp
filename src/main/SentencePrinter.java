@@ -110,4 +110,11 @@ public abstract class SentencePrinter {
         // tree
         line = "TREE: " + adapter.tree;
         if (builder.isPrettyPrinting) {
-          line = auto
+          line = autoformat(line, 6);
+        }
+        sb.append(line).append('\n');
+        // construct
+        for (ConstructAdapter construct : adapter.constructs) {
+          sb.append("SIMP:\n");
+          // construct
+          sb.append(indent(2)).append
