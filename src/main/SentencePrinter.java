@@ -123,4 +123,9 @@ public abstract class SentencePrinter {
           // text
           line = indent(2) + "TEXT: " + construct.text;
           if (builder.isPrettyPrinting) {
-       
+            line = autoformat(line, 2 + 6);
+          }
+          sb.append(line).append('\n');
+          // component
+          for (ComponentAdapter component : construct.components) {
+            sb.append(indent(2)).app
