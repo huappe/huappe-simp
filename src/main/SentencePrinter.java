@@ -128,4 +128,11 @@ public abstract class SentencePrinter {
           sb.append(line).append('\n');
           // component
           for (ComponentAdapter component : construct.components) {
-            sb.append(indent(2)).app
+            sb.append(indent(2)).append("COMP: ").append(component.type);
+            sb.append(loc(component.begin, component.end)).append('\n');
+          }
+        }
+        return sb.toString();
+      }
+
+      private String autoformat(String line
