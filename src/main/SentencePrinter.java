@@ -135,4 +135,9 @@ public abstract class SentencePrinter {
         return sb.toString();
       }
 
-      private String autoformat(String line
+      private String autoformat(String line, int indent) {
+        StringBuilder sb = new StringBuilder(line.substring(0, indent));
+        // Needed to handle last line correctly
+        line = line.substring(indent) + "\n";
+        line = line.replaceAll(
+                "(.{1," + (width - inde
