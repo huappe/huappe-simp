@@ -140,4 +140,13 @@ public abstract class SentencePrinter {
         // Needed to handle last line correctly
         line = line.substring(indent) + "\n";
         line = line.replaceAll(
-                "(.{1," + (width - inde
+                "(.{1," + (width - indent) + "})\\s+",
+                indent(indent) + "$1\n");
+        return sb.append(line.trim()).toString();
+      }
+
+      private String loc(int from, int to) {
+        return "[" + from + ".." + to + ']';
+      }
+
+      String indent(
