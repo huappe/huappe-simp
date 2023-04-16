@@ -149,4 +149,9 @@ public abstract class SentencePrinter {
         return "[" + from + ".." + to + ']';
       }
 
-      String indent(
+      String indent(int indent) {
+        return StringUtils.repeat(' ', indent);
+      }
+    }
+  }
+}
