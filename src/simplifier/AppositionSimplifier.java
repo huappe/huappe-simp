@@ -112,3 +112,128 @@
 // if (copiedPar == null) {
 // throw new RuntimeException(String.format(
 // "can not find APP: %s",
+// tree.toString()));
+// }
+// if (copiedNp == null) {
+// throw new RuntimeException(String.format(
+// "can not find APPREF: %s",
+// tree.toString()));
+// }
+// if (copiedCl == null) {
+// throw new RuntimeException(String.format(
+// "can not find APPOSITIVE: %s",
+// tree.toString()));
+// }
+//
+// // simplify
+// while (copiedPar.numChildren() != 0) {
+// copiedPar.removeChild(0);
+// }
+// copiedPar.addChild(copiedNp);
+// // add "is"
+// Tree is = copiedPar.treeFactory().newLeaf("is");
+// Tree vbz = copiedPar.treeFactory().newTreeNode(
+// "VBZ",
+// Collections.singletonList(is));
+// copiedPar.addChild(vbz);
+// copiedPar.addChild(copiedCl);
+//
+// return copiedPar;
+// }
+//
+// private Tree retainCl(Tree tree, int index) {
+// Tree par = null;
+// Tree np = null;
+// Tree cl = null;
+// // remove ref
+// for (Tree child : tree) {
+// CoreLabel label = (CoreLabel) child.label();
+// Integer subindex = label.get(AppositionAnnotation.class);
+// if (subindex != null && subindex == index) {
+// label.set(AppositionAnnotation.class, null);
+// par = child;
+// }
+// // ref
+// subindex = label.get(AppositionRefAnnotation.class);
+// if (subindex != null && subindex == index) {
+// label.set(AppositionRefAnnotation.class, null);
+// np = child;
+// }
+// // appositive
+// subindex = label.get(AppositionAppositiveAnnotation.class);
+// if (subindex != null && subindex == index) {
+// label.set(AppositionAppositiveAnnotation.class, null);
+// cl = child;
+// break;
+// }
+// }
+// if (par == null) {
+// throw new RuntimeException(String.format(
+// "can not find APP: %s",
+// tree.toString()));
+// }
+// if (np == null) {
+// throw new RuntimeException(String.format(
+// "can not find APPREF: %s",
+// tree.toString()));
+// }
+// if (cl == null) {
+// throw new RuntimeException(String.format(
+// "can not find APPOSITIVE: %s",
+// tree.toString()));
+// }
+// while (par.numChildren() != 0) {
+// par.removeChild(0);
+// }
+// par.addChild(cl);
+// return tree;
+// }
+//
+// private Tree retainNp(Tree tree, int index) {
+// Tree par = null;
+// Tree np = null;
+// Tree cl = null;
+// // remove ref
+// for (Tree child : tree) {
+// CoreLabel label = (CoreLabel) child.label();
+// Integer subindex = label.get(AppositionAnnotation.class);
+// if (subindex != null && subindex == index) {
+// label.set(AppositionAnnotation.class, null);
+// par = child;
+// }
+// // ref
+// subindex = label.get(AppositionRefAnnotation.class);
+// if (subindex != null && subindex == index) {
+// label.set(AppositionRefAnnotation.class, null);
+// np = child;
+// }
+// // appositive
+// subindex = label.get(AppositionAppositiveAnnotation.class);
+// if (subindex != null && subindex == index) {
+// label.set(AppositionAppositiveAnnotation.class, null);
+// cl = child;
+// break;
+// }
+// }
+// if (par == null) {
+// throw new RuntimeException(String.format(
+// "can not find APP: %s",
+// tree.toString()));
+// }
+// if (np == null) {
+// throw new RuntimeException(String.format(
+// "can not find APPREF: %s",
+// tree.toString()));
+// }
+// if (cl == null) {
+// throw new RuntimeException(String.format(
+// "can not find APPOSITIVE: %s",
+// tree.toString()));
+// }
+// while (par.numChildren() != 0) {
+// par.removeChild(0);
+// }
+// par.addChild(np);
+// return tree;
+// }
+// }
