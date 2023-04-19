@@ -21,4 +21,13 @@
 // return true;
 // }
 // }
-// 
+// return false;
+// }
+//
+// protected void simplify(Tree par, int index) {
+//
+// // change value
+// par.setValue(par.value() + "-###");
+// // simplify
+// Iterator<Tree> itr = par.iterator();
+// while (itr.h
