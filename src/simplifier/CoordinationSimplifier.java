@@ -30,4 +30,11 @@
 // par.setValue(par.value() + "-###");
 // // simplify
 // Iterator<Tree> itr = par.iterator();
-// while (itr.h
+// while (itr.hasNext()) {
+// Tree child = itr.next();
+// int subindex = PtbUtils.getSimpIndex(child.value(), "-CONJ");
+// if (subindex != -1 && subindex == index) {
+// // change value
+// child.setValue(child.value() + "-@@@");
+// // copy
+// Tree co
