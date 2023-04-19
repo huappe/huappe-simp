@@ -9,4 +9,16 @@
 // class CoordinationSimplifier extends ISimpSimplifier {
 //
 // protected CoordinationSimplifier() {
-// super(roo
+// super(root);
+// }
+//
+// @Override
+// public boolean find() {
+// for (Tree child : root.preOrderNodeList()) {
+// int index = PtbUtils.getSimpIndex(child.value(), "-COO");
+// if (index != -1) {
+// simplify(child, index);
+// return true;
+// }
+// }
+// 
