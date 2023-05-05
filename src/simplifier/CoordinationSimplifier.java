@@ -51,4 +51,11 @@
 //
 // Tree copiedPar = m.getNode("par");
 // while (copiedPar.numChildren() != 0) {
-// copiedPar.removeChil
+// copiedPar.removeChild(0);
+// }
+// copiedPar.addChild(copiedChild);
+// copiedChild.setValue(copiedChild.value().replace("-CONJ" + index, ""));
+// copiedPar.setValue(copiedPar.value().replace("-COO" + index, ""));
+//
+// simplifiedTrees.add(copied);
+//
