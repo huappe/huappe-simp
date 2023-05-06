@@ -45,3 +45,79 @@ public abstract class ISimpSimplifier implements Annotator {
     set.addAll(TOKENIZE_SSPLIT_PARSE);
     set.add(ISimpAnnotator.ISMP_TREE);
     return set;
+  }
+
+  protected static final TregexPattern   tregex   = TregexPattern
+                                                      .compile("/###/=par << /@@@/=child");
+  protected static final TsurgeonPattern tsurgeon = Tsurgeon
+                                                      .parseOperation("replace par child");
+
+  @Override
+  public final void annotate(Annotation annotation) {
+    if (annotation.containsKey(SentencesAnnotation.class)) {
+      for (CoreMap sentence : annotation.get(SentencesAnnotation.class)) {
+        if (sentence.containsKey(TreeAnnotation.class)) {
+          Tree root = sentence.get(TreeAnnotation.class);
+          List<Tree> list = annotate(root);
+          if (!sentence.containsKey(ISimpSimplifiedAnnotation.class)) {
+            sentence.set(ISimpSimplifiedAnnotation.class, list);
+          } else {
+            sentence.get(ISimpSimplifiedAnnotation.class).addAll(list);
+          }
+        } else {
+          throw new RuntimeException("unable to find tree in: "
+              + sentence.get(TextAnnotation.class));
+        }
+      }
+    } else {
+      throw new RuntimeException("unable to find sentences in: " + annotation);
+    }
+  }
+
+  public final List<Tree> annotate(Tree tree) {
+    List<Tree> listlist = new ArrayList<Tree>();
+
+    for (Tree child : tree) {
+      // parent
+      CoreLabel label = (CoreLabel) child.label();
+      Integer index = label.get(annotationKey);
+      if (index != null) {
+        listlist.add(annotate(child, index));
+      }
+    }
+    return listlist;
+  }
+
+  /**
+   * Attempts to find the first node that matches the pattern.
+   * 
+   * @param tree
+   * @param index
+   * @return
+   */
+  protected abstract Tree annotate(Tree tree, int index);
+
+  protected static class TreeFilter implements Filter<Tree> {
+
+    List<Tree> trees;
+
+    TreeFilter(Tree... ts) {
+      trees = new ArrayList<Tree>();
+      for (Tree t : ts) {
+        trees.add(t);
+      }
+    }
+
+    @Override
+    public boolean accept(Tree tree) {
+      for (Tree t : trees) {
+        // only check reference
+        if (t == tree) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+  }
+}
