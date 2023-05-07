@@ -8,4 +8,13 @@
 // import edu.stanford.nlp.trees.Tree;
 // import edu.stanford.nlp.trees.tregex.TregexMatcher;
 //
-// cla
+// class ParenthesisSimplifier extends ISimpSimplifier {
+//
+// protected ParenthesisSimplifier() {
+// super(ParenthesisAnnotation.class);
+// }
+//
+// @Override
+// protected Tree annotate(Tree tree, int index) {
+//
+// Tree copiedTree = t
