@@ -24,4 +24,10 @@
 // // find
 // for (Tree child : copiedTree) {
 // CoreLabel label = (CoreLabel) child.label();
-// Integer subindex = label.get(Parenthes
+// Integer subindex = label.get(ParenthesisAnnotation.class);
+// if (subindex != null && subindex == index) {
+// label.set(ParenthesisAnnotation.class, null);
+// copiedPar = child;
+// }
+// // ref
+// subindex = label.get(ParenthesisRefAnnotation.class);
