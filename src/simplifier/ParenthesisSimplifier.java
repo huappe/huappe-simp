@@ -17,4 +17,11 @@
 // @Override
 // protected Tree annotate(Tree tree, int index) {
 //
-// Tree copiedTree = t
+// Tree copiedTree = tree.deepCopy();
+// Tree copiedPar = null;
+// Tree copiedNp = null;
+// Tree copiedCl = null;
+// // find
+// for (Tree child : copiedTree) {
+// CoreLabel label = (CoreLabel) child.label();
+// Integer subindex = label.get(Parenthes
