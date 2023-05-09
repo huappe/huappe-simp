@@ -31,3 +31,10 @@
 // }
 // // ref
 // subindex = label.get(ParenthesisRefAnnotation.class);
+// if (subindex != null && subindex == index) {
+// label.set(ParenthesisRefAnnotation.class, null);
+// copiedNp = child;
+// }
+// // appositive
+// subindex = label.get(ParenthesisElemAnnotation.class);
+// if (subindex != null && sub
