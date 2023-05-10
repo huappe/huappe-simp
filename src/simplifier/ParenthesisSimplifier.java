@@ -37,4 +37,13 @@
 // }
 // // appositive
 // subindex = label.get(ParenthesisElemAnnotation.class);
-// if (subindex != null && sub
+// if (subindex != null && subindex == index) {
+// label.set(ParenthesisElemAnnotation.class, null);
+// copiedCl = child;
+// break;
+// }
+// }
+// if (copiedPar == null) {
+// throw new RuntimeException(String.format(
+// "can not find PAR: %s",
+// tr
