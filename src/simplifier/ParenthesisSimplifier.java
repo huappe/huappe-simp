@@ -55,4 +55,13 @@
 // }
 // if (copiedCl == null) {
 // throw new RuntimeException(String.format(
-// "can 
+// "can not find ELEMENTS: %s",
+// tree.toString()));
+// }
+// // only ref
+// c
+//
+// while (itr.hasNext()) {
+// Tree child = itr.next();
+// int subindex = PtbUtils.getSimpIndex(child.value(), "-PARREF");
+// if 
