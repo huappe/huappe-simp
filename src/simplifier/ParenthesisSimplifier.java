@@ -68,4 +68,11 @@
 // subindex = PtbUtils.getSimpIndex(child.value(), "-ELEMENTS");
 // }
 // if (subindex != -1 && subindex == index) {
-// // 
+// // change value
+// child.setValue(child.value() + "-@@@");
+// // copy
+// Tree copied = root.deepCopy();
+// TregexMatcher m = tregex.matcher(copied);
+// boolean found = m.find();
+// if (!found) {
+// throw new IllegalArgumentExcepti
