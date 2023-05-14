@@ -94,4 +94,12 @@
 // ""));
 // copiedPar.setValue(copiedPar.value()
 // .replace("-PARENTHESIS" + index, ""));
-// // tsurgeon.evalu
+// // tsurgeon.evaluate(copied, m);
+//
+// simplifiedTrees.add(copied);
+// // restore
+// child.setValue(child.value().substring(0, child.value().length() - 4));
+// }
+// }
+// // restore
+// par.setValue(par.value().substring(0, par.value().length() - 4));
