@@ -88,4 +88,10 @@
 // }
 // copiedPar.addChild(copiedChild);
 // copiedChild
-// .setValue(copiedChild.value().replace("-PARREF" + in
+// .setValue(copiedChild.value().replace("-PARREF" + index, ""));
+// copiedChild.setValue(copiedChild.value().replace(
+// "-ELEMENTS" + index,
+// ""));
+// copiedPar.setValue(copiedPar.value()
+// .replace("-PARENTHESIS" + index, ""));
+// // tsurgeon.evalu
