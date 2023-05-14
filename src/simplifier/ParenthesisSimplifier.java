@@ -75,4 +75,10 @@
 // TregexMatcher m = tregex.matcher(copied);
 // boolean found = m.find();
 // if (!found) {
-// throw new IllegalArgumentExcepti
+// throw new IllegalArgumentException("no matching found:" + copied);
+// }
+// // restore child in copied
+// Tree copiedChild = m.getNode("child");
+// copiedChild.setValue(copiedChild.value().substring(
+// 0,
+// copiedChild.value().length() - 4))
