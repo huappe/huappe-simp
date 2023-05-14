@@ -64,4 +64,8 @@
 // while (itr.hasNext()) {
 // Tree child = itr.next();
 // int subindex = PtbUtils.getSimpIndex(child.value(), "-PARREF");
-// if 
+// if (subindex == -1 || subindex != index) {
+// subindex = PtbUtils.getSimpIndex(child.value(), "-ELEMENTS");
+// }
+// if (subindex != -1 && subindex == index) {
+// // 
