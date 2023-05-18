@@ -33,4 +33,11 @@
 // Iterator<Tree> itr = par.iterator();
 // while (itr.hasNext()) {
 // Tree child = itr.next();
-// int subindex = PtbUtils.getSimpIndex(child.value(), "-RELRE
+// int subindex = PtbUtils.getSimpIndex(child.value(), "-RELREF");
+// if (subindex != -1 && subindex == index) {
+// // change value
+// child.setValue(child.value() + "-@@@");
+// // copy
+// Tree copied = root.deepCopy();
+// TregexMatcher m = tregex.matcher(copied);
+// boolean found = m.find();
