@@ -25,4 +25,12 @@
 // return false;
 // }
 //
-// protected void simplify(Tree par, int ind
+// protected void simplify(Tree par, int index) {
+//
+// // change value
+// par.setValue(par.value() + "-###");
+// // simplify
+// Iterator<Tree> itr = par.iterator();
+// while (itr.hasNext()) {
+// Tree child = itr.next();
+// int subindex = PtbUtils.getSimpIndex(child.value(), "-RELRE
