@@ -41,3 +41,9 @@
 // Tree copied = root.deepCopy();
 // TregexMatcher m = tregex.matcher(copied);
 // boolean found = m.find();
+// if (!found) {
+// throw new IllegalArgumentException("no matching found:" + copied);
+// }
+// // restore child in copied
+// Tree copiedChild = m.getNode("child");
+// copiedChild.setValue(copiedChild.value().substring(
