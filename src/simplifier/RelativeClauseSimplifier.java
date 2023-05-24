@@ -47,3 +47,11 @@
 // // restore child in copied
 // Tree copiedChild = m.getNode("child");
 // copiedChild.setValue(copiedChild.value().substring(
+// 0,
+// copiedChild.value().length() - 4));
+// Tree copiedPar = m.getNode("par");
+// while (copiedPar.numChildren() != 0) {
+// copiedPar.removeChild(0);
+// }
+// copiedPar.addChild(copiedChild);
+// copiedChild.setValue(copie
