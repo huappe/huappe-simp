@@ -61,4 +61,12 @@
 //
 // simplifiedTrees.add(copied);
 // // restore
-// chi
+// child.setValue(child.value().substring(0, child.value().length() - 4));
+// }
+// }
+// // ref clause
+// Tree ref = null;
+// Tree clause = null;
+// itr = par.iterator();
+// while (itr.hasNext()) {
+// Tree child = 
