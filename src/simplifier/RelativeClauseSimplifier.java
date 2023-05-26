@@ -74,4 +74,13 @@
 // if (subindex != -1 && subindex == index) {
 // ref = child;
 // }
-// subindex = PtbUtils.getSimpIndex(child.value(), "-C
+// subindex = PtbUtils.getSimpIndex(child.value(), "-CLAUSE");
+// if (subindex != -1 && subindex == index) {
+// clause = child;
+// }
+// }
+// if (ref == null || clause == null) {
+// throw new IllegalArgumentException("no matching found:\n"
+// + root
+// + "\nindex:"
+// + i
