@@ -54,4 +54,11 @@
 // copiedPar.removeChild(0);
 // }
 // copiedPar.addChild(copiedChild);
-// copiedChild.setValue(copie
+// copiedChild.setValue(copiedChild.value().replace("-RELREF"+index, ""));
+// copiedPar.setValue(copiedPar.value().replace("-RELATIVE"+index, ""));
+//
+// // tsurgeon.evaluate(copied, m);
+//
+// simplifiedTrees.add(copied);
+// // restore
+// chi
