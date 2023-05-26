@@ -69,4 +69,9 @@
 // Tree clause = null;
 // itr = par.iterator();
 // while (itr.hasNext()) {
-// Tree child = 
+// Tree child = itr.next();
+// int subindex = PtbUtils.getSimpIndex(child.value(), "-RELREF");
+// if (subindex != -1 && subindex == index) {
+// ref = child;
+// }
+// subindex = PtbUtils.getSimpIndex(child.value(), "-C
