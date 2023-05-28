@@ -83,4 +83,11 @@
 // throw new IllegalArgumentException("no matching found:\n"
 // + root
 // + "\nindex:"
-// + i
+// + index);
+// }
+// Tree newRoot = new LabeledScoredTreeFactory().newLeaf("ROOT");
+// Tree newS = new LabeledScoredTreeFactory().newLeaf("S");
+// newRoot.addChild(newS);
+// newS.addChild(ref.deepCopy());
+// newS.addChild(clause.deepCopy());
+//
