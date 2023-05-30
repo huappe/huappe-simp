@@ -90,4 +90,8 @@
 // newRoot.addChild(newS);
 // newS.addChild(ref.deepCopy());
 // newS.addChild(clause.deepCopy());
-//
+// simplifiedTrees.add(newRoot);
+// // restore
+// par.setValue(par.value().substring(0, par.value().length() - 4));
+// }
+// }
