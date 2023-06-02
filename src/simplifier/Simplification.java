@@ -10,4 +10,11 @@
 // import edu.stanford.nlp.trees.Tree;
 // import edu.stanford.nlp.trees.Treebank;
 //
-// public class Simpli
+// public class Simplification {
+//
+// public static Treebank simplify(Tree tree) {
+// Treebank treebank = new MemoryTreebank();
+//
+// Set<String> simplifiedSentences = new HashSet<String>();
+//
+// Queue<Tree> queue = new LinkedList<Tree>();
