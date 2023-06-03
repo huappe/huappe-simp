@@ -18,3 +18,14 @@
 // Set<String> simplifiedSentences = new HashSet<String>();
 //
 // Queue<Tree> queue = new LinkedList<Tree>();
+// queue.offer(tree);
+//
+// int types[] = new int[] { //
+// ISimpSimplifier.Parenthesis, //
+// ISimpSimplifier.Coordination, //
+// ISimpSimplifier.Relative, //
+// ISimpSimplifier.Apposition,//
+// };
+//
+// while (!queue.isEmpty()) {
+// Tree
