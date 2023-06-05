@@ -34,4 +34,12 @@
 // ISimpSimplifier simplifier = ISimpSimplifier.matcher(t, types[i]);
 // if (simplifier.find()) {
 // found = true;
-// q
+// queue.addAll(simplifier.getSimplifiedTrees());
+// break;
+// }
+// }
+// if (!found) {
+// String sentence = PtbUtils.lineString2(t);
+// if (!simplifiedSentences.contains(sentence)) {
+// treebank.add(t);
+// simplifiedSentences.
