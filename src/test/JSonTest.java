@@ -25,4 +25,10 @@ public class JSonTest {
 
   @Test
   public void test() {
-    Annotation docu
+    Annotation document = new Annotation(
+        "UDEL is a universities, such as UPENN and CMU. UDEL is a universities, such as UPENN and CMU.");
+    isimp.annotate(document);
+
+    List<CoreMap> sentences = document.get(SentencesAnnotation.class);
+
+    S
