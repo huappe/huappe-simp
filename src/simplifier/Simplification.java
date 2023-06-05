@@ -42,4 +42,11 @@
 // String sentence = PtbUtils.lineString2(t);
 // if (!simplifiedSentences.contains(sentence)) {
 // treebank.add(t);
-// simplifiedSentences.
+// simplifiedSentences.add(sentence);
+// }
+// }
+// }
+//
+// return treebank;
+// }
+// }
