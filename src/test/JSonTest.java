@@ -31,4 +31,11 @@ public class JSonTest {
 
     List<CoreMap> sentences = document.get(SentencesAnnotation.class);
 
-    S
+    SentencePrinter json = new SentencePrinterBuilder().setPrettyPrinting()
+        .createJson();
+
+    for (CoreMap sentence : sentences) {
+      System.out.println(json.get(sentence));
+    }
+  }
+}
