@@ -39,3 +39,30 @@
 // t.first,
 // t.second,
 // t.third));
+// }
+// sb.append(",\n   text=");
+// // line
+// List<Tree> leaves = tree.getLeaves();
+// for (Triple<String, Integer, Integer> t : p.second) {
+// // find leaf
+// for(Tree leaf: leaves) {
+// Triple<String, Integer, Integer> tri = PtbUtils.parseValue(leaf.value());
+// if (t.second <= tri.second && tri.third <= t.third) {
+// sb.append(tri.first + " ");
+// }
+// }
+// }
+// sb.append("]\n");
+// }
+// System.out.println(sb);
+//
+// // simplified
+// Treebank simplified = Simplification.simplify(tree);
+// for(Tree stree: simplified) {
+// System.out.println(PtbUtils.lineString2(stree));
+// }
+// }
+// }
+//
+//
+// }
