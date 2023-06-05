@@ -11,4 +11,18 @@ import org.junit.Test;
 import detect.ISimpBuilder;
 import edu.stanford.nlp.ling.CoreAnnotations.SentencesAnnotation;
 import edu.stanford.nlp.pipeline.Annotation;
-import edu.st
+import edu.stanford.nlp.pipeline.Annotator;
+import edu.stanford.nlp.util.CoreMap;
+
+public class JSonTest {
+
+  Annotator isimp;
+
+  @Before
+  public void init() {
+    isimp = new ISimpBuilder().create();
+  }
+
+  @Test
+  public void test() {
+    Annotation docu
