@@ -28,4 +28,10 @@
 // };
 //
 // while (!queue.isEmpty()) {
-// Tree
+// Tree t = queue.poll();
+// boolean found = false;
+// for (int i = 0; i < types.length; i++) {
+// ISimpSimplifier simplifier = ISimpSimplifier.matcher(t, types[i]);
+// if (simplifier.find()) {
+// found = true;
+// q
