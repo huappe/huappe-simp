@@ -12,4 +12,7 @@ public class PatternEnv {
   }
 
   // simplification
-  public static Strin
+  public static String COORDINATION_TREGEX        = "coordination-detect.txt";
+  public static String RELATIVE_TREGEX            = "relative clause-detect.txt";
+  public static String PARENTHESIS_TREGEX         = "parenthesis-detect.txt";
+  public static String APPOS
