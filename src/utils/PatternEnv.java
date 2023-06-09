@@ -18,4 +18,8 @@ public class PatternEnv {
   public static String APPOSITION_TREGEX          = "apposition-detect.txt";
   public static String MEMEMBER_COLLECTION_TREGEX = "member-collection-detect.txt";
   public static String NPPP_TREGEX                = "nppp.txt";
-  public static String SEN
+  public static String SENBEG_TREGEX              = "sentenceBeginning.txt";
+  public static String HYPERNYMY_TREGEX           = "hypernymy-detect.txt";
+  public static String OTHERS_TREGEX              = "others.txt";
+  // adapter
+  public sta
