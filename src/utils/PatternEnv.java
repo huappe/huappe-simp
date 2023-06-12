@@ -22,4 +22,7 @@ public class PatternEnv {
   public static String HYPERNYMY_TREGEX           = "hypernymy-detect.txt";
   public static String OTHERS_TREGEX              = "others.txt";
   // adapter
-  public sta
+  public static String PAR_ADATER_TREGEX          = "parenthesis-adapter.txt";
+  public static String REL_ADATER_TREGEX          = "relative clause-adapter.txt";
+  public static String COO_ADATER_TREGEX          = "coordination-adapter.txt";
+  public static String ADA
