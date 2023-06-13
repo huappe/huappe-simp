@@ -13,4 +13,11 @@ public class PtbWriter {
                                             }
                                           };
 
-  public static final LabelWriter FULL    = new DetailedLabel
+  public static final LabelWriter FULL    = new DetailedLabelWriter();
+
+  public static String print(Tree t, LabelWriter labelPrinter) {
+    return printHelper(new StringBuilder(), t, labelPrinter).toString();
+  }
+
+  private static StringBuilder printHelper(StringBuilder sb, Tree t,
+    
