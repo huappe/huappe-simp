@@ -9,4 +9,8 @@ public class PtbWriter {
 
                                             @Override
                                             public String labelString(Tree t) {
-       
+                                              return t.label().toString();
+                                            }
+                                          };
+
+  public static final LabelWriter FULL    = new DetailedLabel
