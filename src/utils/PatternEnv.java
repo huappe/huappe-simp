@@ -25,4 +25,5 @@ public class PatternEnv {
   public static String PAR_ADATER_TREGEX          = "parenthesis-adapter.txt";
   public static String REL_ADATER_TREGEX          = "relative clause-adapter.txt";
   public static String COO_ADATER_TREGEX          = "coordination-adapter.txt";
-  public static String ADA
+  public static String ADATER_TREGEX              = "adapter.txt";
+}
