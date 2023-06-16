@@ -20,4 +20,12 @@ public class PtbWriter {
   }
 
   private static StringBuilder printHelper(StringBuilder sb, Tree t,
-    
+      LabelWriter labelPrinter) {
+    if (t.isLeaf()) {
+      return sb.append(labelPrinter.labelString(t));
+    } else {
+      sb.append('(');
+      if (t.label() != null) {
+        sb.append(labelPrinter.labelString(t));
+      }
+      Tree[] kids = 
