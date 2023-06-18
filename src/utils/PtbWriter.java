@@ -40,3 +40,14 @@ public class PtbWriter {
   }
 }
 
+interface LabelWriter {
+
+  public String labelString(Tree t);
+}
+
+class DetailedLabelWriter implements LabelWriter {
+
+  @Override
+  public String labelString(Tree t) {
+
+    CoreLabel label = (CoreLabel) t.l
