@@ -28,4 +28,15 @@ public class PtbWriter {
       if (t.label() != null) {
         sb.append(labelPrinter.labelString(t));
       }
-      Tree[] kids = 
+      Tree[] kids = t.children();
+      if (kids != null) {
+        for (Tree kid : kids) {
+          sb.append(' ');
+          printHelper(sb, kid, labelPrinter);
+        }
+      }
+      return sb.append(')');
+    }
+  }
+}
+
