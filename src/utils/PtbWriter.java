@@ -50,4 +50,10 @@ class DetailedLabelWriter implements LabelWriter {
   @Override
   public String labelString(Tree t) {
 
-    CoreLabel label = (CoreLabel) t.l
+    CoreLabel label = (CoreLabel) t.label();
+    StringBuilder sb = new StringBuilder();
+
+    if (t.isLeaf()) {
+      sb.append(label.value()).append('_').append(label.beginPosition())
+          .append('_').append(label.endPosition());
+    } else if (t.
