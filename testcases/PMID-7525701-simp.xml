@@ -1,2 +1,3 @@
 TYPE: sentence[0..161]
-TEXT: <?xml version="1.0" enc
+TEXT: <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE collection SYSTEM "BioC.dtd"><collection><source>bionlp-st-2011</source><date>20130815</date><key>bionlp-st-2011.
+POS : <?xml version="1.0" encoding="UTF-8"?>_NN <!DOCTYPE collection SYSTEM "BioC.dtd"
