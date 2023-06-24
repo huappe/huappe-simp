@@ -4,4 +4,4 @@ POS : <?xml version="1.0" encoding="UTF-8"?>_NN <!DOCTYPE collection SYSTEM�
 TREE: (ROOT (NP (NP (NN <?xml version="1.0" encoding="UTF-8"?>) (NN <!DOCTYPE collection SYSTEM "BioC.dtd">) (NN <collection>)) (NP (NN <source>) (NN bionlp-st-2011) (NN </source>) (NN <date>) (CD 20130815) (NN </date>) (NN <key>) (NN bionlp-st-2011)) (. .)))
 
 TYPE: sentence[161..705]
-TEXT: key</key><document><id>PMID-7525701</id><passage><offset>0</o
+TEXT: key</key><document><id>PMID-7525701</id><passage><offset>0</offset><text>Cross-linking CD40 on B cells rapidly activates nuclear factor-kappa B. </text><annotation id="T1"><infon key="type">Protein</infon><location offset="14" length="18"></location><text>CD40</text></annotation><annotation id="
