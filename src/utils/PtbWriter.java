@@ -56,4 +56,11 @@ class DetailedLabelWriter implements LabelWriter {
     if (t.isLeaf()) {
       sb.append(label.value()).append('_').append(label.beginPosition())
           .append('_').append(label.endPosition());
-    } else if (t.
+    } else if (t.isPreTerminal()) {
+      sb.append(label.tag());
+    } else {
+      sb.append(label.category());
+    }
+    return sb.toString();
+  }
+}
