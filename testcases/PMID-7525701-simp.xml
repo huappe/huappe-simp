@@ -9,4 +9,5 @@ POS : key_JJ </key>_JJ <document>_NN <id>_NN PMID-7525701_NN </id>_NN <passage>_
 TREE: (ROOT (S (S (NP (NP (JJ key) (JJ </key>) (NN <document>) (NN <id>)) (NP (NN PMID-7525701) (NN </id>) (NN <passage>) (NN <offset>) (CD 0) (NN </offset>) (NN <text>)) (NP (NP (NN Cross-linking) (NN CD40)) (PP (IN on) (NP (NN B) (NNS cells))))) (ADVP (RB rapidly)) (VP (VBZ activates) (NP (JJ nuclear) (NN factor-kappa) (NNP B.) (NNP </text>)) (NP-TMP (NP (NN <annotation id="T1">) (NN <infon key="type">) (NN Protein) (NN </infon>) (NN <location offset="14" length="18">) (NN </location>) (NN <text>) (NN CD40) (NN </text>) (NN </annotation>) (NN <annotation id="T14">) (NN <infon key="type">) (NN Binding) (NN </infon>) (NN <location offset="0" length="13">) (NN </location>) (NN <text>) (NN Cross-linking)) (NP (JJ </text>) (NN </annotation>) (NN </passage>) (NN <passage>) (NN <offset>) (CD 73) (NN </offset>) (NN <text>))))) (NP (DT The) (NN B) (JJ cell-associated) (NN surface) (NN molecule) (NN CD40)) (VP (VBZ functions) (S (VP (TO to) (VP (VB regulate) (NP (NN B) (NN cell) (NNS responses)))))) (. .)))
 
 TYPE: sentence[706..850]
-TEXT: Cross-linking CD4
+TEXT: Cross-linking CD40 on B cells can lead to homotypic cell adhesion, IL-6 production, and, in combination with cytokines, to Ig isotype switching.
+POS : Cross-linking_NN CD40_NN on_IN B_NN cells_NNS can_MD lead_VB to_TO homoty
