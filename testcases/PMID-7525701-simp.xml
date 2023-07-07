@@ -11,4 +11,8 @@ TREE: (ROOT (S (S (NP (NP (JJ key) (JJ </key>) (NN <document>) (NN <id>)) (NP (N
 TYPE: sentence[706..850]
 TEXT: Cross-linking CD40 on B cells can lead to homotypic cell adhesion, IL-6 production, and, in combination with cytokines, to Ig isotype switching.
 POS : Cross-linking_NN CD40_NN on_IN B_NN cells_NNS can_MD lead_VB to_TO homotypic_JJ cell_NN adhesion_NN ,_, IL-6_NN production_NN ,_, and_CC ,_, in_IN combination_NN with_IN cytokines_NNS ,_, to_TO Ig_NN isotype_NN switching_NN ._. 
-TREE: (ROOT (S (NP (NP (NN Cross-linking) (NN CD40)) (PP (IN on) (NP (NN B) (NNS cells)))) (VP (MD can) (VP (VB lead) (PP (PP (TO to) (NP (NP (JJ homotypic) (NN cell) (NN adhesion)) (, ,) (NP (NN IL-6) (NN production)) (, ,))) (CC and) (PRN (, ,) (PP (IN in) (NP (NP (NN combination)) (PP (IN with) (NP 
+TREE: (ROOT (S (NP (NP (NN Cross-linking) (NN CD40)) (PP (IN on) (NP (NN B) (NNS cells)))) (VP (MD can) (VP (VB lead) (PP (PP (TO to) (NP (NP (JJ homotypic) (NN cell) (NN adhesion)) (, ,) (NP (NN IL-6) (NN production)) (, ,))) (CC and) (PRN (, ,) (PP (IN in) (NP (NP (NN combination)) (PP (IN with) (NP (NNS cytokines))))) (, ,)) (PP (TO to) (NP (NN Ig) (NN isotype) (NN switching)))))) (. .)))
+
+TYPE: sentence[851..931]
+TEXT: Tyrosine kinase activity is increased shortly after engagement of this receptor.
+POS : Tyrosine_NN kinase_NN activ
