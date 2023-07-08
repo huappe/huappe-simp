@@ -15,4 +15,5 @@ TREE: (ROOT (S (NP (NP (NN Cross-linking) (NN CD40)) (PP (IN on) (NP (NN B) (NNS
 
 TYPE: sentence[851..931]
 TEXT: Tyrosine kinase activity is increased shortly after engagement of this receptor.
-POS : Tyrosine_NN kinase_NN activ
+POS : Tyrosine_NN kinase_NN activity_NN is_VBZ increased_VBN shortly_RB after_IN engagement_NN of_IN this_DT receptor_NN ._. 
+TREE: (ROOT (S (NP (NN Tyrosine) (NN kinase) (NN activity)) (VP (VBZ is) (VP (VBN increased) (ADVP (RB shortly)) (PP (IN after) (NP (NP (
