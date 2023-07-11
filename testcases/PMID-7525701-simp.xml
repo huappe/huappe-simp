@@ -20,4 +20,5 @@ TREE: (ROOT (S (NP (NN Tyrosine) (NN kinase) (NN activity)) (VP (VBZ is) (VP (VB
 
 TYPE: sentence[932..1037]
 TEXT: Little is known about how the very early events induced by CD40 cross-linking link to cellular responses.
-POS : Little_JJ is_VBZ known_VBN about_IN how_
+POS : Little_JJ is_VBZ known_VBN about_IN how_WRB the_DT very_RB early_JJ events_NNS induced_VBN by_IN CD40_NN cross-linking_NN link_NN to_TO cellular_JJ responses_NNS ._. 
+TREE: (ROOT (S (NP (JJ Little)) (VP (VBZ is) (VP (VBN known) (PP (IN about) (SBAR (WHA
