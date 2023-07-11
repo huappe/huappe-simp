@@ -25,4 +25,4 @@ TREE: (ROOT (S (NP (JJ Little)) (VP (VBZ is) (VP (VBN known) (PP (IN about) (SBA
 
 TYPE: sentence[1038..1237]
 TEXT: In this study, we demonstrate that nuclear factor (NF)-kappa B and NF-kappa B-like transcription factors are activated after cross-linking CD40 on resting human tonsillar B cells and on B cell lines.
-PO
+POS : In_IN this_DT study_NN ,_, we_PRP demonstrate_VBP that_IN nuclear_JJ factor_NN -LRB-_-LRB- NF_NN -RRB-_-RRB- -_: kappa_NN B_NN and_CC NF-kappa_NN B-like_JJ transcription_NN factors_NNS are_VBP activated_VBN after_IN cross-linking_JJ
