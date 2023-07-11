@@ -21,4 +21,8 @@ TREE: (ROOT (S (NP (NN Tyrosine) (NN kinase) (NN activity)) (VP (VBZ is) (VP (VB
 TYPE: sentence[932..1037]
 TEXT: Little is known about how the very early events induced by CD40 cross-linking link to cellular responses.
 POS : Little_JJ is_VBZ known_VBN about_IN how_WRB the_DT very_RB early_JJ events_NNS induced_VBN by_IN CD40_NN cross-linking_NN link_NN to_TO cellular_JJ responses_NNS ._. 
-TREE: (ROOT (S (NP (JJ Little)) (VP (VBZ is) (VP (VBN known) (PP (IN about) (SBAR (WHADVP (WRB how)) (S (NP (DT the) (ADJP (RB very) (JJ early)) (NNS events)) (VP (VBN induced) (PP (IN by) (NP (NP (NN CD40) (NN cross-linking) (NN link)) (PP (TO to) (NP (JJ cellular) (NNS responses))))))))))) (. .))
+TREE: (ROOT (S (NP (JJ Little)) (VP (VBZ is) (VP (VBN known) (PP (IN about) (SBAR (WHADVP (WRB how)) (S (NP (DT the) (ADJP (RB very) (JJ early)) (NNS events)) (VP (VBN induced) (PP (IN by) (NP (NP (NN CD40) (NN cross-linking) (NN link)) (PP (TO to) (NP (JJ cellular) (NNS responses))))))))))) (. .)))
+
+TYPE: sentence[1038..1237]
+TEXT: In this study, we demonstrate that nuclear factor (NF)-kappa B and NF-kappa B-like transcription factors are activated after cross-linking CD40 on resting human tonsillar B cells and on B cell lines.
+PO
