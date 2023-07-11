@@ -27,3 +27,11 @@ TYPE: sentence[1038..1237]
 TEXT: In this study, we demonstrate that nuclear factor (NF)-kappa B and NF-kappa B-like transcription factors are activated after cross-linking CD40 on resting human tonsillar B cells and on B cell lines.
 POS : In_IN this_DT study_NN ,_, we_PRP demonstrate_VBP that_IN nuclear_JJ factor_NN -LRB-_-LRB- NF_NN -RRB-_-RRB- -_: kappa_NN B_NN and_CC NF-kappa_NN B-like_JJ transcription_NN factors_NNS are_VBP activated_VBN after_IN cross-linking_JJ CD40_NN on_IN resting_VBG human_JJ tonsillar_JJ B_NN cells_NNS and_CC on_IN B_NN cell_NN lines_NNS ._. 
 TREE: (ROOT (S (PP (IN In) (NP (DT this) (NN study))) (, ,) (NP (PRP we)) (VP (VBP demonstrate) (SBAR (IN that) (S (NP (NP (JJ nuclear) (NN factor)) (PRN (-LRB- -LRB-) (NP (NN NF)) (-RRB- -RRB-))) (: -) (NP (NP (NN kappa) (NN B)) (CC and) (NP (NN NF-kappa) (JJ B-like) (NN transcription) (NNS factors))) (VP (VBP are) (VP (VBN activated) (PP (IN after) (NP (JJ cross-linking) (NN CD40))) (PP (PP (IN on) (S (VP (VBG resting) (NP (JJ human) (JJ tonsillar) (NN B) (NNS cells))))) (CC and) (PP (IN on) (NP (NN B) (NN cell) (NNS lines))))))))) (. .)))
+SIMP:
+  TYPE: parenthesis[1073..1091]
+  TEXT: nuclear factor (NF
+  COMP: referred noun phrase[1073..1087]
+  COMP: parenthesized elements[1089..1091]
+SIMP:
+  TYPE: noun or noun phrase coordination[1093..1142]
+  TEXT: kappa B and NF-kappa B-
