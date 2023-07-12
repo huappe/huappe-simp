@@ -34,4 +34,10 @@ SIMP:
   COMP: parenthesized elements[1089..1091]
 SIMP:
   TYPE: noun or noun phrase coordination[1093..1142]
-  TEXT: kappa B and NF-kappa B-
+  TEXT: kappa B and NF-kappa B-like transcription factors
+  COMP: conjunct[1093..1100]
+  COMP: conjunction[1101..1104]
+  COMP: conjunct[1105..1142]
+SIMP:
+  TYPE: prep or prep phrase coordination[1182..1236]
+  TEXT: on resting human 
