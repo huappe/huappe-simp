@@ -40,4 +40,10 @@ SIMP:
   COMP: conjunct[1105..1142]
 SIMP:
   TYPE: prep or prep phrase coordination[1182..1236]
-  TEXT: on resting human 
+  TEXT: on resting human tonsillar B cells and on B cell lines
+  COMP: conjunct[1182..1216]
+  COMP: conjunction[1217..1220]
+  COMP: conjunct[1221..1236]
+
+TYPE: sentence[1238..1322]
+TEXT: The activation is rapid and is mediated through a tyrosine kinase-dependent p
