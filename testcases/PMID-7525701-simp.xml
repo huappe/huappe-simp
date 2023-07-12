@@ -46,4 +46,6 @@ SIMP:
   COMP: conjunct[1221..1236]
 
 TYPE: sentence[1238..1322]
-TEXT: The activation is rapid and is mediated through a tyrosine kinase-dependent p
+TEXT: The activation is rapid and is mediated through a tyrosine kinase-dependent pathway.
+POS : The_DT activation_NN is_VBZ rapid_JJ and_CC is_VBZ mediated_VBN through_IN a_DT tyrosine_NN kinase-dependent_JJ pathway_NN ._. 
+TREE: (ROOT (S (NP (DT The) (NN activation)) (VP (VP (V
