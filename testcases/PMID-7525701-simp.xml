@@ -48,4 +48,7 @@ SIMP:
 TYPE: sentence[1238..1322]
 TEXT: The activation is rapid and is mediated through a tyrosine kinase-dependent pathway.
 POS : The_DT activation_NN is_VBZ rapid_JJ and_CC is_VBZ mediated_VBN through_IN a_DT tyrosine_NN kinase-dependent_JJ pathway_NN ._. 
-TREE: (ROOT (S (NP (DT The) (NN activation)) (VP (VP (V
+TREE: (ROOT (S (NP (DT The) (NN activation)) (VP (VP (VBZ is) (ADJP (JJ rapid))) (CC and) (VP (VBZ is) (VP (VBN mediated) (PP (IN through) (NP (DT a) (NN tyrosine) (JJ kinase-dependent) (NN pathway)))))) (. .)))
+SIMP:
+  TYPE: verb or verb phrase coordination[1253..1321]
+  TEXT
