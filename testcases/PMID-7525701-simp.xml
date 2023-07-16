@@ -51,4 +51,10 @@ POS : The_DT activation_NN is_VBZ rapid_JJ and_CC is_VBZ mediated_VBN through_IN
 TREE: (ROOT (S (NP (DT The) (NN activation)) (VP (VP (VBZ is) (ADJP (JJ rapid))) (CC and) (VP (VBZ is) (VP (VBN mediated) (PP (IN through) (NP (DT a) (NN tyrosine) (JJ kinase-dependent) (NN pathway)))))) (. .)))
 SIMP:
   TYPE: verb or verb phrase coordination[1253..1321]
-  TEXT
+  TEXT: is rapid and is mediated through a tyrosine kinase-dependent pathway
+  COMP: conjunct[1253..1261]
+  COMP: conjunction[1262..1265]
+  COMP: conjunct[1266..1321]
+
+TYPE: sentence[1323..1452]
+TEXT: The complexes detected in electrophoretic mobility shift ass
