@@ -57,4 +57,5 @@ SIMP:
   COMP: conjunct[1266..1321]
 
 TYPE: sentence[1323..1452]
-TEXT: The complexes detected in electrophoretic mobility shift ass
+TEXT: The complexes detected in electrophoretic mobility shift assays contain p50, p65 (RelA), c-Rel, and most likely other components.
+POS : The_DT complexes_NNS detected_VBN in_IN electrophoretic_JJ mobility_NN shift_NN assays_NNS contain_VBP p50_NN ,_, p65_NN -LRB-_-LRB- RelA_NN
