@@ -59,4 +59,11 @@ SIMP:
 TYPE: sentence[1323..1452]
 TEXT: The complexes detected in electrophoretic mobility shift assays contain p50, p65 (RelA), c-Rel, and most likely other components.
 POS : The_DT complexes_NNS detected_VBN in_IN electrophoretic_JJ mobility_NN shift_NN assays_NNS contain_VBP p50_NN ,_, p65_NN -LRB-_-LRB- RelA_NN -RRB-_-RRB- ,_, c-Rel_NN ,_, and_CC most_RBS likely_JJ other_JJ components_NNS ._. 
-TREE: (ROOT (S (NP (NP (DT The) (NNS complexes)) (VP (VBN detected) (PP (IN in) (NP (JJ electrophoretic) (NN mobility) (NN shift) (NNS assays))))) (VP (VBP contain) (NP (NP (NN p50) (, ,) (NN p65) (PRN (-LRB- -LRB-) (NN RelA) (-RRB- -RRB-))) (, ,) (NP (NN c-Rel)) (, ,) (CC and) (NP (ADJP (RBS most) (JJ likely)) (JJ other) (NNS components)))) (. .))
+TREE: (ROOT (S (NP (NP (DT The) (NNS complexes)) (VP (VBN detected) (PP (IN in) (NP (JJ electrophoretic) (NN mobility) (NN shift) (NNS assays))))) (VP (VBP contain) (NP (NP (NN p50) (, ,) (NN p65) (PRN (-LRB- -LRB-) (NN RelA) (-RRB- -RRB-))) (, ,) (NP (NN c-Rel)) (, ,) (CC and) (NP (ADJP (RBS most) (JJ likely)) (JJ other) (NNS components)))) (. .)))
+SIMP:
+  TYPE: reduced relative clause[1323..1386]
+  TEXT: The complexes detected in electrophoretic mobility shift assays
+  COMP: referred noun phrase[1323..1336]
+  COMP: clause[1337..1386]
+SIMP:
+  TYPE: noun or noun phrase c
