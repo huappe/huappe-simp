@@ -74,4 +74,5 @@ SIMP:
   COMP: conjunct[1423..1451]
 
 TYPE: sentence[1453..1572]
-T
+TEXT: By using transient transfection assays, we found that cross-linking CD40 supports NF-kappa B-dependent gene expression.
+POS : By_IN using_VBG transient_JJ transfection_NN assays_NNS ,_, we_PRP found_VBD that_IN cross-
