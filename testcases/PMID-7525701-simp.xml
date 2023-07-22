@@ -66,4 +66,12 @@ SIMP:
   COMP: referred noun phrase[1323..1336]
   COMP: clause[1337..1386]
 SIMP:
-  TYPE: noun or noun phrase c
+  TYPE: noun or noun phrase coordination[1395..1451]
+  TEXT: p50, p65 (RelA), c-Rel, and most likely other components
+  COMP: conjunct[1395..1410]
+  COMP: conjunct[1412..1417]
+  COMP: conjunction[1419..1422]
+  COMP: conjunct[1423..1451]
+
+TYPE: sentence[1453..1572]
+T
