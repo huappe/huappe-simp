@@ -79,4 +79,5 @@ POS : By_IN using_VBG transient_JJ transfection_NN assays_NNS ,_, we_PRP found_V
 TREE: (ROOT (S (PP (IN By) (S (VP (VBG using) (NP (JJ transient) (NN transfection) (NNS assays))))) (, ,) (NP (PRP we)) (VP (VBD found) (SBAR (IN that) (S (NP (JJ cross-linking) (NN CD40)) (VP (VBZ supports) (NP (NP (NN NF-kappa)) (NP (JJ B-dependent) (NN gene) (NN expression))))))) (. .)))
 
 TYPE: sentence[1573..1779]
-TEXT: Our results define the NF-kappa 
+TEXT: Our results define the NF-kappa B system as an intermediate event in CD40 signaling and suggest that the CD40 pathway can influence the expression of B cell-associated genes with NF-kappa B consensus sites.
+POS : Our_PRP$ results_NNS define_VBP the_DT
