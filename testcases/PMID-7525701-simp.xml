@@ -75,4 +75,5 @@ SIMP:
 
 TYPE: sentence[1453..1572]
 TEXT: By using transient transfection assays, we found that cross-linking CD40 supports NF-kappa B-dependent gene expression.
-POS : By_IN using_VBG transient_JJ transfection_NN assays_NNS ,_, we_PRP found_VBD that_IN cross-
+POS : By_IN using_VBG transient_JJ transfection_NN assays_NNS ,_, we_PRP found_VBD that_IN cross-linking_JJ CD40_NN supports_VBZ NF-kappa_NN B-dependent_JJ gene_NN expression_NN ._. 
+TREE: (ROOT (S (PP (IN By) (S (VP (VBG using) (NP (JJ transient) (NN transfection) (NNS assays))))) (, ,) (NP (PRP we)) (VP (VBD
