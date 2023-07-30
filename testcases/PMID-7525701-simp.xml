@@ -89,4 +89,5 @@ SIMP:
   COMP: conjunction[1657..1660]
   COMP: conjunct[1661..1778]
 
-TYP
+TYPE: sentence[1780..5972]
+TEXT: </text><annotation id="T2"><infon key="type">Protein</infon><location offset="112" length="116"></location><text>CD40</text></annotation><annotation id="T3"><infon key="type">Protein</in
