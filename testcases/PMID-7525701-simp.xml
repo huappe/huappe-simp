@@ -84,4 +84,9 @@ POS : Our_PRP$ results_NNS define_VBP the_DT NF-kappa_NN B_NN system_NN as_IN an
 TREE: (ROOT (S (NP (PRP$ Our) (NNS results)) (VP (VP (VBP define) (NP (DT the) (NN NF-kappa) (NN B) (NN system)) (PP (IN as) (NP (NP (DT an) (JJ intermediate) (NN event)) (PP (IN in) (NP (NN CD40) (NN signaling)))))) (CC and) (VP (VBP suggest) (SBAR (IN that) (S (NP (DT the) (NN CD40) (NN pathway)) (VP (MD can) (VP (VB influence) (NP (NP (DT the) (NN expression)) (PP (IN of) (NP (NN B) (JJ cell-associated) (NNS genes)))) (PP (IN with) (NP (NN NF-kappa) (NN B) (NN consensus) (NNS sites))))))))) (. .)))
 SIMP:
   TYPE: verb or verb phrase coordination[1585..1778]
-  TEXT: define the NF-kappa B system as an intermediate event in CD
+  TEXT: define the NF-kappa B system as an intermediate event in CD40 signaling and suggest that the CD40 pathway can influence the expression of B cell-associated genes with NF-kappa B consensus sites
+  COMP: conjunct[1585..1656]
+  COMP: conjunction[1657..1660]
+  COMP: conjunct[1661..1778]
+
+TYP
